@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from App_Projetos2.views import home  # Importa a view diretamente do arquivo views.py no nível do projeto
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='home'),  # A página inicial será servida por esta URL
 ]
