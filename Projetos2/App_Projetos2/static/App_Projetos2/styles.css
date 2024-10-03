@@ -16,6 +16,11 @@ h1 {
     margin: 0;
     font-size: 2.5em; /* Tamanho da fonte */
 }
+
+h2{
+    text-align: center;
+}
+
 .container {
     width: 80%;
     margin: auto;
@@ -31,17 +36,7 @@ h1 {
 .intro p {
     font-size: 1.2em;
 }
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
-}
-.gallery img {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
+
 footer {
     background-color: #333; /* Cor de fundo do rodapé */
     color: white; /* Cor do texto em branco */
@@ -82,3 +77,21 @@ footer a {
   color: rgb(255, 0, 111);
 }
 
+.gallery {
+    display: flex;
+    justify-content: space-evenly; /* Distribui o espaço de forma simétrica */
+    align-items: stretch;  /* Garante que todas as caixas tenham a mesma altura */
+    margin: 20px;
+}
+
+/* Estilo para as caixas de texto */
+.box {
+    width: 200px; /* Largura de cada caixa de texto */
+    padding: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 16px;
+    margin-top: 35px;
+    min-height: 150px; /* Define uma altura mínima para a caixa*/
+}

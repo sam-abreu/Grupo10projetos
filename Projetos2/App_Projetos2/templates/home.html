@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,31 @@
     <link rel="stylesheet" href="{% static 'App_Projetos2/styles.css' %}"> <!-- Link para o CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
     <header>
         <h1 id="titleh1">Toytopia</h1>
-        <p>Transformando resíduos têxteis em brinquedos divertidos e sustentáveis!</p>
     </header>
 
     <div class="container">
         <div class="intro">
             <h2>Bem-vindo à Toytopia!</h2>
-            <p>Nossos brinquedos são feitos com materiais reciclados, promovendo a sustentabilidade e a responsabilidade ambiental. Cada brinquedo que criamos é projetado para estimular a imaginação das crianças e contribuir para um futuro mais verde.</p>
+            <p>Nossos brinquedos são feitos com materiais reciclados, promovendo a sustentabilidade e a responsabilidade
+                ambiental. Cada brinquedo que criamos é projetado para estimular a imaginação das crianças e contribuir
+                para um futuro mais verde.</p>
         </div>
 
-        <h2>Galeria</h2>
+        <h2>NOSSOS VALORES</h2>
         <div class="gallery">
-            <img src="https://via.placeholder.com/200x200.png?text=" alt="Brinquedo 1">
-            <img src="https://via.placeholder.com/200x200.png?text=" alt="Brinquedo 2">
-            <img src="https://via.placeholder.com/200x200.png?text=" alt="Brinquedo 3">
-            <img src="https://via.placeholder.com/200x200.png?text=" alt="Brinquedo 4">
-            <img src="https://via.placeholder.com/200x200.png?text=" alt="Brinquedo 5">
+            <div class="box">A ToyTopia é um projeto de impacto social, ambiental e econômico positivo. Visando fomentar oportunidades de trabalho e renda para mulheres em situação de vulnerabilidade social, através da produção de brinquedos educativos artesanais com reuso têxtil.</div>
+            <div class="box">A produção consciente e responsável dos brinquedos educativos é nosso objetivo, tendo em vista um produto sustentável com alto valor agregado. Oferecemos a logística da captação do resíduos têxteis domésticos e industriais para destinação correta, implantando políticas públicas voltadas para o combate as desigualdades de gênero, fortalecimento das comunidades de costura criativa.</div>
+            <div class="box">Além de um produto que desenvolve habilidades cognitivas. Nossa diferencial é o produto de lalto nível, utilizando resíduos têxteis. Aproximando oportunidades de trabalho e renda no território. Validar o produto digital que possa ofertar para a sociedade oportunidades de descarte, reuso e trabalho com resíduos têxteis.</div>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 Fábrica de Ideias. Todos os direitos reservados.</p>
-        <p>Sigam-nos nas redes sociais: 
+        <p>Sigam-nos nas redes sociais:
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -53,7 +54,7 @@
         for (let i = 0; i < titleText.length; i++) {
             const span = document.createElement('span');
             span.innerText = titleText[i];
-            
+
             // Atribuir uma cor baseada na posição (circular pelo array de cores)
             span.classList.add(colors[i % colors.length]);
 
@@ -62,4 +63,5 @@
         }
     </script>
 </body>
+
 </html>
