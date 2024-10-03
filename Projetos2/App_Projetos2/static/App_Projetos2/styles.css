@@ -2,11 +2,11 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Fundo neutro */
+    background-color: #abf804; /* Fundo neutro */
     color: #333;
 }
 header {
-    background-color: #00BFFF; /* Azul claro */
+    background-color: #ffffff;
     color: #000; /* Cor do texto em preto */
     padding: 20px;
     text-align: center;
@@ -55,3 +55,30 @@ footer a {
     color: white;
     margin: 0 10px;
 }
+
+
+.color1 {
+  color: rgb(255, 0, 111);
+}
+.color2 {
+  color: rgb(191, 0, 255);
+}
+.color3 {
+    color: rgb(255, 111, 0);
+  }
+.color4 {
+  color: rgb(255, 0, 111);
+}
+.color5 {
+  color: rgb(191, 0, 255);
+}
+.color6 {
+  color: rgb(2, 217, 255);
+}
+.color7 {
+  color: rgb(4, 251, 70);
+}
+.color8 {
+  color: rgb(255, 0, 111);
+}
+
