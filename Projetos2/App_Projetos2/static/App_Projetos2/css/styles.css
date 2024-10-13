@@ -2,7 +2,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #abf804; /* Fundo neutro */
+  background-color: rgb(4, 251, 70); /* Fundo neutro */
   color: #333;
 }
 
@@ -45,7 +45,7 @@ h2 {
 }
 
 footer {
-  background-color: #333; /* Cor de fundo do rodapé */
+  background-color: #1114117e; /* Cor de fundo do rodapé */
   color: white; /* Cor do texto em branco */
   text-align: center;
   padding: 10px 0;
