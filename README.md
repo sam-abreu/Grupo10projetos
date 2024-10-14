@@ -33,9 +33,9 @@
 
 <br>
 
-<h2 id="linguagens">🚀 Linguagens</h2>
+<h2 id="linguagens">📑Linguagens</h2>
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+Esse projeto foi desenvolvido com as seguintes linguagens:
 
 <br>✔️ Python
 <br>✔️ JavaScript
@@ -81,7 +81,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
     <summary>SR2
     </summary>
     <details>
-        <p>Em andamento...🔧</p>
+        <p>🔧 Em andamento...🔧</p>
     </details>
     <details>
         <summary>Screencast</summary>
