@@ -83,10 +83,6 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
     <details>
         <p>🔧 Em andamento...🔧</p>
     </details>
-    <details>
-        <summary>Screencast</summary>
-        <p>https://youtu.be/_T8fp4fx_nA</p>
-    </details>
 </details>
 
 <br><br>
