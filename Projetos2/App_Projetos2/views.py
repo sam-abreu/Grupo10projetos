@@ -1,9 +1,30 @@
 
 from django.shortcuts import render, redirect
 from .models import Doacao
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+
 
 def home(request):
     return render(request, 'home.html')
+
+def user_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+
+            if user.is_superuser:
+                return redirect('admin')
+            else:
+                return redirect('home')
+            
+        else:
+            return render(request, 'login.html', {'form': 'invalid'})
+
 
 def add_doacao(request):
     if request.method == 'POST':
