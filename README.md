@@ -9,7 +9,7 @@
 
 <h1 align="center">Grupo 10 projetos</h1>
 
-[SR1](#entrega1) &nbsp;|&nbsp; [SR2](#entrega2) &nbsp;|&nbsp;[Linguagens](#linguagens) &nbsp;|&nbsp; [Colaboradores](#colaboradores)
+[SR1](#SR1) &nbsp;|&nbsp; [SR2](#SR2) &nbsp;|&nbsp;[Linguagens](#linguagens) &nbsp;|&nbsp; [Colaboradores](#colaboradores)
 
 <br>
 
@@ -77,7 +77,7 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
 
 <!-- SR2
  -->
-<details id="entrega2">
+<details id="SR2">
     <summary>SR2
     </summary>
     <details>
