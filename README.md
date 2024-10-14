@@ -81,11 +81,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
     <summary>SR2
     </summary>
     <details>
-        <summary>Backlog</summary>
-        <h3>Print do quadro e backlog (JIRA):</h3>
-        <br>
-        <img src="" alt="">
-        <img src="" alt="">
+        <p>Em andamento...🔧</p>
     </details>
     <details>
         <summary>Screencast</summary>
