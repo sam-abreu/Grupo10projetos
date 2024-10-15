@@ -21,9 +21,13 @@
             <p>Nossos brinquedos são feitos com materiais reciclados, promovendo a sustentabilidade e a responsabilidade
                 ambiental. Cada brinquedo que criamos é projetado para estimular a imaginação das crianças e contribuir
                 para um futuro mais verde.</p>
-            <br>
-            <a href="{% url 'doar' %}"><button class="doar">doe agora</button></a>
+            <br>        
+        <div class="button-group"> <!-- Grupo de botões -->
+            <a href="{% url 'doar' %}"><button class="doar">Doe Agora</button></a>
+            <a href="{% url 'comprar_brinquedo' %}"><button class="comprar_brinquedos">Comprar Brinquedos</button></a>
+            <a href="{% url 'add_brinquedo' %}"><button class="add-brinquedos">Adicionar brinquedo</button></a>
         </div>
+            </div>
 
         <h2>NOSSOS VALORES</h2>
         <div class="gallery">

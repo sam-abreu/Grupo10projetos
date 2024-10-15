@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
 # Create your models here.
 class Brinquedo(models.Model):
@@ -21,3 +22,4 @@ class Doacao(models.Model):
 
     def __str__(self):
         return f"{self.nome_doador} - {self.tipo_doacao}"
+    

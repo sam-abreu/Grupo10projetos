@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from .models import Doacao
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from .models import Brinquedo
 
 
 def home(request):
@@ -46,3 +47,29 @@ def add_doacao(request):
         return redirect('home')  # Redireciona para a página inicial após a doação ser cadastrada
 
     return render(request, 'doar.html')
+
+
+def add_brinquedo(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        preco = request.POST.get('preco')
+        faixaetaria = request.POST.get('faixaetaria')
+        material = request.POST.get('material')
+
+        # Cria um novo brinquedo e salva no banco de dados
+        novo_brinquedo = Brinquedo(
+            nome=nome,
+            preco=preco,
+            faixaetaria=faixaetaria,
+            material=material
+        )
+        novo_brinquedo.save()
+
+        # Redireciona para a página principal ou onde você desejar
+        return redirect('home')  # Certifique-se de que 'home' é o nome correto da URL
+
+    return render(request, 'add_brinquedo.html')  # Renderiza um template para adicionar brinquedos
+
+def comprar_brinquedo(request):
+    brinquedos = Brinquedo.objects.all()  # Puxa todos os brinquedos do banco de dados
+    return render(request, 'comprar_brinquedo.html', {'brinquedos': brinquedos})  # Passa os brinquedos para o template
