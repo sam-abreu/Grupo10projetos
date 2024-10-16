@@ -61,6 +61,7 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
     <summary>Links</summary>
     <p>jira: https://cesar-team-ztgvnfkx.atlassian.net/jira/software/projects/G1P/boards/34?atlOrigin=eyJpIjoiNjc5NjA2NWIyZWVmNGUyMjhmMTUxYjRlMDk1ODA1YTUiLCJwIjoiaiJ9</p>
     <p>Miro: https://miro.com/app/board/uXjVKqyeyhk=/</p>
+    <p>Deploy: https://toytopia.azurewebsites.net </p>
 </details>
 
 <!-- SR1 -->
