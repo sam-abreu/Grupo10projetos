@@ -74,6 +74,12 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
         <img src="" alt="">
         <img src="" alt="">
     </details>
+    <details>
+    <summary>Bug Tracker</summary>
+    <h3>Print do quadro Bug Tracker
+    <br>
+    <img src="img/Printbugtracker.jpg" alt="Quadro do bug tracker">
+    </details>
 </details>
 
 <!-- SR2
