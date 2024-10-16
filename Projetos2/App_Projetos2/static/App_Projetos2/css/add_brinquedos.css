@@ -1,0 +1,110 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #fce4ec, #ab47bc); 
+    color: #333;
+    min-height: 100vh; 
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ab47bc; 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: white; 
+}
+
+/* formulário */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; 
+    padding: 20px;
+}
+
+form {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 400px; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #388e3c; 
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffcc80; 
+    border-radius: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fce4ec; 
+}
+
+select:focus,
+input[type="number"]:focus {
+    border-color: #ff7043; 
+    outline: none;
+}
+
+button {
+    background-color: #ff7043; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f4511e; 
+}
+
+/* Rodapé */
+footer {
+    background-color: #333; 
+    color: #fff; 
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+}
+
