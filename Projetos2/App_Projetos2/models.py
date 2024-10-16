@@ -21,5 +21,5 @@ class Doacao(models.Model):
     data_doacao = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.nome_doador} - {self.tipo_doacao}"
+        return f"Nome: {self.nome_doador} / Número: {self.telefone_doador} / Tipo: {self.tipo_doacao}"
     
