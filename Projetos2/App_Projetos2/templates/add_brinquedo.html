@@ -1,0 +1,41 @@
+<!-- add_brinquedo.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Brinquedo</title>
+    <link rel="stylesheet" href="{% static 'App_Projetos2/css/add_brinquedo.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Adicionar Brinquedo</h1>
+    </header>
+
+    <main>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="preco">Preço:</label>
+                <input type="text" name="preco" required>
+            </div>
+            <div class="form-group">
+                <label for="faixaetaria">Faixa Etária:</label>
+                <input type="text" name="faixaetaria" required>
+            </div>
+            <div class="form-group">
+                <label for="material">Material:</label>
+                <input type="text" name="material" required>
+            </div>
+            <button type="submit">Adicionar Brinquedo</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fábrica de Ideias. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
