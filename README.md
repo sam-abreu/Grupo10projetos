@@ -62,7 +62,8 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
     <p>jira: https://cesar-team-ztgvnfkx.atlassian.net/jira/software/projects/G1P/boards/34?atlOrigin=eyJpIjoiNjc5NjA2NWIyZWVmNGUyMjhmMTUxYjRlMDk1ODA1YTUiLCJwIjoiaiJ9</p>
     <p>Miro: https://miro.com/app/board/uXjVKqyeyhk=/</p>
     <p>Link do Azure: https://toytopia.azurewebsites.net </p>
-    <p>Screamcast do prototipo de  baixa fidelidade: https://youtu.be/tR92qqrbJLQ  </p>
+    <p>Screamcast do site feito pelo Azure : https://youtu.be/tR92qqrbJLQ  </p>
+    <p>Screamcast do prototipo de baixa fidelidade : https://youtu.be/pSSf-7CyQaI </p>
 </details>
 
 <!-- SR1 -->
