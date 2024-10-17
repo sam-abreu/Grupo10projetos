@@ -78,7 +78,11 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
     <summary>Bug Tracker</summary>
     <h3>Print do quadro Bug Tracker
     <br>
-    <img src="img/Printbugtracker.jpg" alt="Quadro do bug tracker">
+    <h4>Open:</h4>
+    <img src="img/PrintBugtrracker open.jpg.jpg" alt="Quadro do bug tracker Open">
+    <br>
+    <h4>Closed:<h4>
+    <img src="img/PrintBugtrracker closed.jpg.jpg" alt="Quadro do bug tracker closed">
     </details>
 </details>
 
