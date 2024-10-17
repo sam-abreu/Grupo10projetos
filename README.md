@@ -79,6 +79,12 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
         <img src="https://github.com/user-attachments/assets/a157b3f8-a7fc-49d3-a8b9-f336fcf60763" alt="">
     </details>
     <details>
+        <summary>Diagrama de Atividades</summary>
+        <h3>Print do Diagrama de Atividades :</h3>
+        <br>
+        <img src="https://cdn.discordapp.com/attachments/931660144348131331/1296570805009780736/image.png?ex=6712c529&is=671173a9&hm=55e217991cd9e4e67e6153329b848255cfb6c5bd2472de28711ea16acdca3c13&"  alt="">
+    </details>
+    <details>
     <summary>Bug Tracker</summary>
     <h3>Print do quadro Bug Tracker
     <br>
