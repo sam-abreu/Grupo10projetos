@@ -58,20 +58,33 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
 </details>
 
 <details>
-    <summary>Links</summary>
+    <summary>Links Importantes</summary>
     <p>jira: https://cesar-team-ztgvnfkx.atlassian.net/jira/software/projects/G1P/boards/34?atlOrigin=eyJpIjoiNjc5NjA2NWIyZWVmNGUyMjhmMTUxYjRlMDk1ODA1YTUiLCJwIjoiaiJ9</p>
     <p>Miro: https://miro.com/app/board/uXjVKqyeyhk=/</p>
+    <p>Link do Azure: https://toytopia.azurewebsites.net </p>
 </details>
 
 <!-- SR1 -->
 <details id="SR1">
     <summary>SR1</summary>
     <details>
-        <summary>Backlog</summary>
-        <h3>Print do quadro e backlog (JIRA):</h3>
+        <summary>JIRA</summary>
+        <h3>Print do Backlog (JIRA):</h3>
         <br>
-        <img src="" alt="">
-        <img src="" alt="">
+        <img src="https://github.com/user-attachments/assets/78b87755-736c-4de0-9770-8ca7ec346953" alt="">
+        <h3>Print do Quadro</h3>
+        <br>
+        <img src="https://github.com/user-attachments/assets/a157b3f8-a7fc-49d3-a8b9-f336fcf60763" alt="">
+    </details>
+    <details>
+    <summary>Bug Tracker</summary>
+    <h3>Print do quadro Bug Tracker
+    <br>
+    <h4>Open:</h4>
+    <img src="img/PrintBugtrracker open.jpg" alt="Quadro do bug tracker Open">
+    <br>
+    <h4>Closed:<h4>
+    <img src="img/Printbugtrackerclosed.jpg" alt="Quadro do bug tracker closed">
     </details>
 </details>
 
