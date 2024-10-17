@@ -64,6 +64,7 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
     <p>Link do Azure: https://toytopia.azurewebsites.net </p>
     <p>Screamcast do site feito pelo Azure : https://youtu.be/tR92qqrbJLQ  </p>
     <p>Screamcast do prototipo de baixa fidelidade : https://youtu.be/pSSf-7CyQaI </p>
+    <p>Relatorio de Pair Programming: https://docs.google.com/document/d/112vA-K8lvBrZ9RM_KAHsrx4dLuCKftQtBWNmu3eDX3k/edit?usp=sharing</p>
 </details>
 
 <!-- SR1 -->
