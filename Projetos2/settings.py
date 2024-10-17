@@ -21,10 +21,7 @@ load_dotenv(BASE_DIR / '.env')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# Defina o ambiente
-TARGET_ENV = os.getenv('TARGET_ENV', 'dev')
-
-# O restante da configuração...
+TARGET_ENV = os.getenv('TARGET_ENV')
 NOT_PROD = not TARGET_ENV.lower().startswith('prod')
 
 if NOT_PROD:
@@ -62,11 +59,11 @@ else:
         }
     }
     
-
 # Application definition
 
+
 INSTALLED_APPS = [
-     "django.contrib.admin",
+    "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -74,11 +71,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     #Adicionar whitenoise na lista de aplicativos instalados
     "whitenoise.runserver_nostatic",
-    'App_Projetos2',
+    "App_Projetos2",
 ]
 
 MIDDLEWARE = [
-     "django.middleware.security.SecurityMiddleware",
+    "django.middleware.security.SecurityMiddleware",
     # Add whitenoise middleware after the security middleware                             
     'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
