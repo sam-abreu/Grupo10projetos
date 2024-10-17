@@ -58,17 +58,17 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
 </details>
 
 <details>
-    <summary>Links</summary>
+    <summary>Links Importantes</summary>
     <p>jira: https://cesar-team-ztgvnfkx.atlassian.net/jira/software/projects/G1P/boards/34?atlOrigin=eyJpIjoiNjc5NjA2NWIyZWVmNGUyMjhmMTUxYjRlMDk1ODA1YTUiLCJwIjoiaiJ9</p>
     <p>Miro: https://miro.com/app/board/uXjVKqyeyhk=/</p>
-    <p>Deploy: https://toytopia.azurewebsites.net </p>
+    <p>Link do Azure: https://toytopia.azurewebsites.net </p>
 </details>
 
 <!-- SR1 -->
 <details id="SR1">
     <summary>SR1</summary>
     <details>
-        <summary>Backlog</summary>
+        <summary>JIRA</summary>
         <h3>Print do Backlog (JIRA):</h3>
         <br>
         <img src="https://github.com/user-attachments/assets/78b87755-736c-4de0-9770-8ca7ec346953" alt="">
