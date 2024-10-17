@@ -69,10 +69,12 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
     <summary>SR1</summary>
     <details>
         <summary>Backlog</summary>
-        <h3>Print do quadro e backlog (JIRA):</h3>
+        <h3>Print do Backlog (JIRA):</h3>
         <br>
-        <img src="" alt="">
-        <img src="" alt="">
+        <img src="https://github.com/user-attachments/assets/78b87755-736c-4de0-9770-8ca7ec346953" alt="">
+        <h3>Print do Quadro</h3>
+        <br>
+        <img src="https://github.com/user-attachments/assets/a157b3f8-a7fc-49d3-a8b9-f336fcf60763" alt="">
     </details>
     <details>
     <summary>Bug Tracker</summary>
