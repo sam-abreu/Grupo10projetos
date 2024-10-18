@@ -62,8 +62,8 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
     <p>jira: https://cesar-team-ztgvnfkx.atlassian.net/jira/software/projects/G1P/boards/34?atlOrigin=eyJpIjoiNjc5NjA2NWIyZWVmNGUyMjhmMTUxYjRlMDk1ODA1YTUiLCJwIjoiaiJ9</p>
     <p>Miro: https://miro.com/app/board/uXjVKqyeyhk=/</p>
     <p>Link do Azure: https://toytopia.azurewebsites.net </p>
-    <p>Screamcast do site feito pelo Azure : https://youtu.be/tR92qqrbJLQ  </p>
-    <p>Screamcast do prototipo de baixa fidelidade : https://youtu.be/BTEafaYMpjc </p>
+    <p>Screencast do site feito pelo Azure : https://youtu.be/tR92qqrbJLQ  </p>
+    <p>Screencast do prototipo de baixa fidelidade : https://youtu.be/BTEafaYMpjc </p>
     <p>Relatorio de Pair Programming: https://docs.google.com/document/d/112vA-K8lvBrZ9RM_KAHsrx4dLuCKftQtBWNmu3eDX3k/edit?usp=sharing</p>
 </details>
 
