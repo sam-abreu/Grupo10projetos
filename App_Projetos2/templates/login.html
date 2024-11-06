@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="{% static 'App_Projetos2/css/login.css' %}">
 </head>
 <body>
-    <h2>Login</h2>
+
+<div class="form-container">
+    <h2 class="above-text">Login</h2>
     <form method="POST" action="{% url 'login' %}">
         {% csrf_token %}
         <label for="username">Usuário:</label>
@@ -26,6 +28,7 @@
         </div>
     {% endif %}
 
-    <p>Ainda não tem uma conta? <a href="{% url 'cadastro_user' %}">Clique aqui</a> para se cadastrar.</p> 
+    <p class="below-text">Ainda não tem uma conta? <a href="{% url 'cadastro_user' %}">Clique aqui</a> para se cadastrar.</p> 
+</div>
 </body>
 </html>
