@@ -1,13 +1,32 @@
 
 from django.shortcuts import render, redirect
-from .models import Doacao
+from .models import Doacao, Brinquedo
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .models import Brinquedo
+from django.http import HttpResponse
 
 
 def home(request):
     return render(request, 'home.html')
+
+def cadastro_user(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = User.objects.filter(username=username).first()
+
+        if user:
+            return HttpResponse('Já existe um usuário com esse nome')
+        
+        else:
+            User.objects.create_user(username=username, password=password)
+            user.save()
+            return redirect('login')
+        
+    else:
+        return render(request, 'cadastro_user.html')
 
 def user_login(request):
     if request.method == 'POST':
@@ -24,7 +43,10 @@ def user_login(request):
                 return redirect('home')
             
         else:
-            return render(request, 'login.html', {'form': 'invalid'})
+            return HttpResponse('Usuário ou senha inválidos!')
+
+    else:
+        return render(request, 'login.html')
 
 
 def add_doacao(request):

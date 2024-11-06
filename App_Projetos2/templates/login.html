@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'App_Projetos2/css/login.css' %}">
 </head>
 <body>
@@ -24,5 +25,7 @@
             <p>Erro: Usuário ou senha incorretos.</p>
         </div>
     {% endif %}
+
+    <p>Ainda não tem uma conta? <a href="{% url 'cadastro_user' %}">Clique aqui</a> para se cadastrar.</p> 
 </body>
 </html>
