@@ -16,7 +16,7 @@
     </header>
 
     <main>
-        <form method="POST">
+        <form method="POST" action="{% url 'add_brinquedo' %}>
             {% csrf_token %}
             <div class="form-group">
                 <label for="nome">Nome:</label>
