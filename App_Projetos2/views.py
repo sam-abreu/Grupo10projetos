@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
+def adminpage(request):
+    return render(request, 'admin.html')
 
 def home(request):
     return render(request, 'home.html')
@@ -21,7 +23,7 @@ def cadastro_user(request):
             return HttpResponse('Já existe um usuário com esse nome')
         
         else:
-            User.objects.create_user(username=username, password=password)
+            user = User.objects.create_user(username=username, password=password)
             user.save()
             return redirect('login')
         
@@ -38,7 +40,7 @@ def user_login(request):
             login(request, user)
 
             if user.is_superuser:
-                return redirect('admin')
+                return redirect('adminpage')
             else:
                 return redirect('home')
             
@@ -69,6 +71,10 @@ def add_doacao(request):
         return redirect('home')  # Redireciona para a página inicial após a doação ser cadastrada
 
     return render(request, 'doar.html')
+
+def visualizar_doacao(request):
+    doacoes = Doacao.objects.all()
+    return render(request, 'visualizar_doacao.html', {'doacoes': doacoes})
 
 
 def add_brinquedo(request):
