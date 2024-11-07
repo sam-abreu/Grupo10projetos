@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="{% static 'App_Projetos2/css/login.css' %}">
 </head>
 <body>
-
-<div class="form-cxontainer">
+<div class="form-container">
     <h2 class="above-text">Login</h2>
     <form method="POST" action="{% url 'login' %}">
         {% csrf_token %}
@@ -32,4 +31,3 @@
 </div>
 </body>
 </html>
-
