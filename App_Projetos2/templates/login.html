@@ -1,88 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'App_Projetos2/css/login.css' %}" />
-  <title>Página de Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'App_Projetos2/css/login.css' %}">
 </head>
-
 <body>
-  <div class="container">
-    <div class="forms-container">
-      <div class="loginCadastro">
-        <form action="#" class="loginForm">
-          <h2 class="title">Entre no site</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Usuário" />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Senha" />
-          </div>
-          <input type="submit" value="Entrar" class="btn solid" />
-        </form>
-        <form action="#" class="cadastroForm">
-          <h2 class="title">Cadastre-se</h2>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Usuário" />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Email" />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Senha" />
-          </div>
-          <input type="submit" class="btn" value="Cadastre-se" />
-        </form>
-      </div>
-    </div>
 
-    <div class="panels-container">
-      <div class="panel left-panel">
-        <div class="content">
-          <h3>Você é novo aqui?</h3>
-          <p>
-            Faça seu cadastro conosco, prometo que é rápido!
-          </p>
-          <button class="btn transparent" id="cadastroBtn">
-            Cadastre-se
-          </button>
+<div class="form-cxontainer">
+    <h2 class="above-text">Login</h2>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    {% if form.errors %}
+        <div>
+            <p>Erro: Usuário ou senha incorretos.</p>
         </div>
-      </div>
-      <div class="panel right-panel">
-        <div class="content">
-          <h3>Já possui uma conta?</h3>
-          <p>
-            Então efetue seu login e aproveite o site.
-          </p>
-          <button class="btn transparent" id="loginBtn">
-            Entrar
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+    {% endif %}
 
-  <script>
-    const cadastroBtn = document.getElementById('cadastroBtn');
-    const loginBtn = document.getElementById('loginBtn');
-    const container = document.querySelector('.container');
-
-    cadastroBtn.addEventListener('click', () => {
-      container.classList.add("sign-up-mode");
-    });
-
-    loginBtn.addEventListener('click', () => {
-      container.classList.remove("sign-up-mode");
-    });
-  </script>
+    <p class="below-text">Ainda não tem uma conta? <a href="{% url 'cadastro_user' %}">Clique aqui</a> para se cadastrar.</p> 
+</div>
 </body>
 </html>
+
