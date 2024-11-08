@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+import openpyxl
+from openpyxl.styles import Font
 
 def adminpage(request):
     return render(request, 'admin.html')
@@ -51,14 +53,16 @@ def user_login(request):
         return render(request, 'login.html')
 
 
+# View para adicionar uma nova doação
 def add_doacao(request):
-    if request.method == 'POST':
-        nome_doador = request.POST.get('nome_doador')
-        email_doador = request.POST.get('email_doador')
-        telefone_doador = request.POST.get('telefone_doador')
-        tipo_doacao = request.POST.get('tipo_doacao')
-        descricao = request.POST.get('descricao')
+    if request.method == "POST":
+        nome_doador = request.POST.get("nome_doador")
+        email_doador = request.POST.get("email_doador")
+        telefone_doador = request.POST.get("telefone_doador")
+        tipo_doacao = request.POST.get("tipo_doacao")
+        descricao = request.POST.get("descricao")
 
+        # Criação de uma nova doação no banco de dados
         doacao = Doacao(
             nome_doador=nome_doador,
             email_doador=email_doador,
@@ -67,10 +71,39 @@ def add_doacao(request):
             descricao=descricao
         )
         doacao.save()
-
-        return redirect('home')  # Redireciona para a página inicial após a doação ser cadastrada
+        
+        # Redireciona para uma página de confirmação ou para outra ação após salvar
+        return redirect('home')
 
     return render(request, 'doar.html')
+
+# View para gerar o relatório em Excel
+def gerar_relatorio_doacoes(request):
+    workbook = openpyxl.Workbook()
+    worksheet = workbook.active
+    worksheet.title = "Relatório de Doações"
+
+    headers = ["Nome do Doador", "Email do Doador", "Telefone do Doador", "Tipo de Doação", "Descrição", "Data da Doação"]
+    for col_num, header in enumerate(headers, 1):
+        cell = worksheet.cell(row=1, column=col_num)
+        cell.value = header
+        cell.font = Font(bold=True)
+
+    doacoes = Doacao.objects.all()
+    for row_num, doacao in enumerate(doacoes, 2):
+        worksheet.cell(row=row_num, column=1, value=doacao.nome_doador)
+        worksheet.cell(row=row_num, column=2, value=doacao.email_doador)
+        worksheet.cell(row=row_num, column=3, value=doacao.telefone_doador)
+        worksheet.cell(row=row_num, column=4, value=doacao.tipo_doacao)
+        worksheet.cell(row=row_num, column=5, value=doacao.descricao)
+        worksheet.cell(row=row_num, column=6, value=doacao.data_doacao.strftime('%d/%m/%Y %H:%M'))
+
+    response = HttpResponse(
+        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    response['Content-Disposition'] = 'attachment; filename="relatorio_doacoes.xlsx"'
+    workbook.save(response)
+    return response
 
 def visualizar_doacao(request):
     doacoes = Doacao.objects.all()
@@ -101,3 +134,4 @@ def add_brinquedo(request):
 def comprar_brinquedo(request):
     brinquedos = Brinquedo.objects.all()  # Puxa todos os brinquedos do banco de dados
     return render(request, 'comprar_brinquedo.html', {'brinquedos': brinquedos})  # Passa os brinquedos para o template
+

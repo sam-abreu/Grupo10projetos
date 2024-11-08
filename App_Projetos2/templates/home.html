@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toytopia</title>
-    {% load static %}
     <link rel="stylesheet" href="{% static 'App_Projetos2/css/styles.css' %}"> <!-- Link para o CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -25,7 +25,6 @@
         <div class="button-group"> <!-- Grupo de botões -->
             <a href="{% url 'doar' %}"><button class="doar">Doe Agora</button></a>
             <a href="{% url 'comprar_brinquedo' %}"><button class="comprar_brinquedos">Comprar Brinquedos</button></a>
-            <a href="{% url 'admin:index' %}"><button class="add-brinquedos">Administrador</button></a>
 
         </div>
             </div>
