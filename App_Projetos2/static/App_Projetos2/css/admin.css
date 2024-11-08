@@ -1,0 +1,96 @@
+/* Fundo gradiente para a página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a0dad, #ffffff);
+    color: #333;
+    min-height: 100vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Contêiner principal para centralizar os elementos */
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2.2em;
+    color: #ffffff;
+    margin-bottom: 30px;
+    display: flex;
+    margin-top: 160px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: -480px;
+    flex-wrap: wrap;
+}
+
+/* Estilo dos botões */
+.button-group button {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de "Adicionar Brinquedo" com gradiente */
+.add-brinquedo {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.add-brinquedo:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+/* Botão de "Visualizar Doações" com gradiente */
+.visualizar-doacoes {
+    background: linear-gradient(135deg, #74cc3e, #0cab29);
+}
+
+.visualizar-doacoes:hover {
+    background: linear-gradient(135deg, #0cab29, #098e22);
+}
+
+/* Adiciona um leve aumento no botão ao passar o mouse */
+.button-group button:hover {
+    transform: scale(1.05);
+}
+
+/* Animação sutil ao carregar os botões */
+.button-group button {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Define a animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
