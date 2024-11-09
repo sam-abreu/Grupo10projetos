@@ -1,0 +1,45 @@
+describe('template spec', () => {
+    it('teste cadastro', () =>{
+        cy.visit('http://127.0.0.1:8000/cadastro_user/')
+        cy.wait(1000)
+        cy.get('#username').type("Luigi", {force : true})
+        cy.wait(1000)
+        cy.get('#password').type("mario", {force : true})
+        cy.get('button').click()
+        cy.wait(3000)
+    })
+
+    it('verificando cadastro', () =>{
+        cy.visit('http://127.0.0.1:8000/')
+        cy.wait(1000)
+        cy.get('#username').type("Luigi")
+        cy.wait(1000)
+        cy.get('#password').type("mario")
+        cy.wait(1000)
+        cy.get('button').click()
+    })
+
+    it('teste cadastro NF', () =>{
+        cy.visit('http://127.0.0.1:8000/cadastro_user/')
+        cy.wait(1000)
+        cy.get('#username').type("Luigi", {force : true})
+        cy.wait(1000)
+        cy.get('#password').type("mario", {force : true})
+        cy.wait(1000)
+        cy.get('#password').clear()
+        cy.wait(2000)
+        cy.get('button').click()
+        cy.wait(1000)
+    })
+
+    it('teste login NF', () =>{
+        cy.visit('http://127.0.0.1:8000/')
+        cy.wait(1000)
+        cy.get('#username').type("Usuário não existente")
+        cy.wait(2000)
+        cy.get('#password').type("mario")
+        cy.wait(2000)
+        cy.get('button').click()
+        cy.wait(2000)
+    })
+})
