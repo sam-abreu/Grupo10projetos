@@ -72,6 +72,24 @@ h1 {
     background: linear-gradient(135deg, #0cab29, #098e22);
 }
 
+/* Botão da "Home" com gradiente */
+.home-button {
+    background: linear-gradient(135deg, #ffd102, #fc7600);
+}
+
+.home-button:hover {
+    background: linear-gradient(135deg, #625413, #b05506);
+}
+
+/* Botão do "relatório(excel)" com gradiente */
+.excel-button {
+    background: linear-gradient(135deg, #ff02b7, #8f0043);
+}
+
+.excel-button:hover {
+    background: linear-gradient(135deg, #9c0170, #5b002b);
+}
+
 /* Adiciona um leve aumento no botão ao passar o mouse */
 .button-group button:hover {
     transform: scale(1.05);
