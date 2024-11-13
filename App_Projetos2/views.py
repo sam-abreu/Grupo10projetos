@@ -77,6 +77,10 @@ def add_doacao(request):
 
     return render(request, 'doar.html')
 
+def residuos(request):
+    brinquedos = Brinquedo.objects.all()
+    return render(request, 'residuos.html', {'brinquedos': brinquedos})
+
 # View para gerar o relatório em Excel
 def gerar_relatorio_doacoes(request):
     workbook = openpyxl.Workbook()

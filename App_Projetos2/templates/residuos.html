@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Resíduos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'App_Projetos2/css/residuos.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Uso de Resíduos nos Brinquedos</h1>
+    </header>
+
+    <div class="brinquedos-container">
+        {% for brinquedo in brinquedos %}
+            <div class="brinquedo-card">
+                <h2 class="brinquedo-nome">{{ brinquedo.nome }}</h2>
+                <p class="brinquedo-material">Material: {{ brinquedo.material }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <a href="{% url 'home' %}">Voltar para a Home</a>
+    </footer>
+</body>
+</html>
