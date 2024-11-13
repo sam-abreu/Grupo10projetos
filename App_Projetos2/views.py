@@ -135,3 +135,37 @@ def comprar_brinquedo(request):
     brinquedos = Brinquedo.objects.all()  # Puxa todos os brinquedos do banco de dados
     return render(request, 'comprar_brinquedo.html', {'brinquedos': brinquedos})  # Passa os brinquedos para o template
 
+
+def sugestao_brinquedo(request):
+    idade = None
+    sexo = ''
+    sugestao = ''
+    
+    if request.method == 'POST':
+        idade = float(request.POST.get('idade'))
+        sexo = request.POST.get('sexo', '')
+
+        if idade >= 0 and idade <= 2 and sexo == 'Masculino':
+            sugestao = 'Boneco de herói'
+
+        elif idade > 2 and idade <= 6 and sexo == 'Masculino':
+            sugestao = 'Carro de brinquedo'
+        
+        elif idade > 6 and idade <= 10 and sexo == 'Masculino':
+            sugestao = 'Brinquedo de construção'
+        
+        if idade >= 0 and idade <= 2 and sexo == 'Feminino':
+            sugestao = 'Boneca'
+
+        elif idade > 2 and idade <= 6 and sexo == 'Feminino':
+            sugestao = 'Palácio de princesas'
+        
+        elif idade > 6 and idade <= 10 and sexo == 'Feminino':
+            sugestao = 'Brinquedo de mercadinho'
+
+
+    return render(request, 'sugestao_brinquedo.html', {
+        'sexo': sexo,
+        'idade': idade,
+        'sugestao' : sugestao
+    })

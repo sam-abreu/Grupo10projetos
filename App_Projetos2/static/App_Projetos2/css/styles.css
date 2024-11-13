@@ -45,10 +45,12 @@ h2 {
 }
 
 .button-group {
-  display: flex; /* Usar flexbox para alinhar os botões */
+  display: flex; /* Alinha os botões em uma linha */
+  justify-content: center; /* Centraliza os botões */
   gap: 10px; /* Espaço entre os botões */
   margin-top: 20px; /* Espaço acima dos botões */
 }
+
 
 .doar {
   background-color: rgb(255, 0, 111);
@@ -94,6 +96,21 @@ h2 {
 .add-brinquedos:hover {
   background-color: rgb(255, 149, 0); /* Muda a cor ao passar o mouse */
 }
+
+.sugestao_brinquedo {
+  background-color: rgb(102, 204, 0); /* Cor de fundo para o botão sugestão */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Efeito de transição */
+}
+
+.sugestao_brinquedo:hover {
+  background-color: rgb(76, 153, 0); /* Cor ao passar o mouse */
+}
+
 footer {
   background-color: #1114117e; /* Cor de fundo do rodapé */
   color: white; /* Cor do texto em branco */
