@@ -1,0 +1,108 @@
+/* Estilos Gerais */
+body {
+    background: linear-gradient(135deg, #6a0dad, #ffffff);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 700px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Título */
+.highlighted-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #6a0dad;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+form {
+    margin-top: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    font-size: 18px;
+    color: #6a0dad;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Campos de Entrada */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #6a0dad;
+    outline: none;
+    box-shadow: 0 0 8px rgba(106, 13, 173, 0.3);
+}
+
+/* Botão de Envio */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a0dad;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #5a0bba;
+}
+
+/* Resultados */
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f9f1ff;
+    border: 1px solid #6a0dad;
+    border-radius: 8px;
+    color: #333;
+}
+
+.result h3 {
+    color: #6a0dad;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.result p {
+    font-size: 18px;
+    margin: 0;
+}

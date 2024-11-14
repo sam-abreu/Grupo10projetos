@@ -22,4 +22,13 @@ class Doacao(models.Model):
 
     def __str__(self):
         return f"Nome: {self.nome_doador} / Número: {self.telefone_doador} / Tipo: {self.tipo_doacao}"
+
+class Inscricao(models.Model):
+    nome = models.CharField(max_length=256)
+    email = models.EmailField()
+    telefone = models.CharField(max_length=15)
+    mensagem = models.TextField()
+
+    def __str__(self):
+        return self.nome
     

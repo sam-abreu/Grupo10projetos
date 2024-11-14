@@ -31,6 +31,21 @@ def cadastro_user(request):
         
     else:
         return render(request, 'cadastro_user.html')
+    
+
+def trabalhe_conosco(request):
+    if request.method == 'POST':
+        nome = request.POST['nome']
+        email = request.POST['email']
+        telefone = request.POST['telefone']
+        mensagem = request.POST['mensagem']
+
+        inscricao = Inscricao(nome=nome, email=email, telefone=telefone, mensagem=mensagem)
+        inscricao.save()
+
+        return HttpResponse("Inscrição enviada com sucesso!")  # Exibe uma confirmação
+    else:
+        return render(request, 'trabalhe_conosco.html')
 
 def user_login(request):
     if request.method == 'POST':
