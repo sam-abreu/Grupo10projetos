@@ -185,6 +185,12 @@ def sugestao_brinquedo(request):
         
         elif idade > 6 and idade <= 10 and sexo == 'Feminino':
             sugestao = 'Brinquedo de mercadinho'
+        
+        elif idade > 10 and sexo == 'Feminino':
+            sugestao = 'Excedeu a idade limite'
+
+        elif idade > 10 and sexo == 'Masculino':
+            sugestao = 'Excedeu a idade limite'
 
 
     return render(request, 'sugestao_brinquedo.html', {

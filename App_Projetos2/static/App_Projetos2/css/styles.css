@@ -2,7 +2,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #7b2cbf, #9d4edd, #c77dff); /* Degradê de tons de roxo */
+  background: linear-gradient(135deg, #6a11cb, #00ffcc);/* Degradê de tons de roxo */
   color: #333;
 }
 
@@ -53,8 +53,8 @@ h2 {
 
 
 .doar {
-  background-color: rgb(255, 0, 111);
-  color: white;
+  background-color: #ff5e78;
+  color: black;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -68,8 +68,8 @@ h2 {
 }
 
 .comprar_brinquedos {
-  background-color: rgb(0, 140, 255); /* Azul para o botão de compra */
-  color: white; /* Texto em branco */
+  background-color: #50c878; /* Azul para o botão de compra */
+  color: black; /* Texto em branco */
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -83,8 +83,8 @@ h2 {
 }
 
 .add-brinquedos {
-  background-color: rgb(255, 149, 0);
-  color: white;
+  background-color: #f8de7e;
+  color: black;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -98,7 +98,8 @@ h2 {
 }
 
 .sugestao_brinquedo {
-  background-color: rgb(102, 204, 0); /* Cor de fundo para o botão sugestão */
+  background-color: #f8de7e;; /* Cor de fundo para o botão sugestão */
+  color: black;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -112,7 +113,8 @@ h2 {
 }
 
 .residuos{
-  background-color: yellow; /* Cor de fundo para o botão sugestão */
+  background-color: #1fb6ff; /* Cor de fundo para o botão sugestão */
+  color: black;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -126,7 +128,8 @@ h2 {
 }
 
 .trabalhe_conosco {
-  background-color: orange;
+  background-color: #ff6ec7;
+  color: black;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
