@@ -1,6 +1,6 @@
 
 from django.shortcuts import render, redirect
-from .models import Doacao, Brinquedo
+from .models import Doacao, Brinquedo, Inscricao
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
@@ -46,6 +46,10 @@ def trabalhe_conosco(request):
         return HttpResponse("Inscrição enviada com sucesso!")  # Exibe uma confirmação
     else:
         return render(request, 'trabalhe_conosco.html')
+    
+def visualizar_trabalheconosco(request):
+    inscricoes = Inscricao.objects.all()
+    return render(request, 'visualizar_trabalheconosco.html',{'inscricoes': inscricoes})
 
 def user_login(request):
     if request.method == 'POST':

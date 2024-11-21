@@ -1,0 +1,36 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'App_Projetos2/css/visualizar_trabalheconosco.css' %}">
+    <title>Lista voluntários</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de voluntários</h1>
+
+        {% if inscricoes %}
+            <ul>
+                {% for inscricao in inscricoes %}
+                    <li>
+                        <strong>Nome:</strong>{{inscricao.nome}} <br>
+                        <strong>email:</strong>{{inscricao.email}} <br>
+                        <strong>telefone:</strong>{{inscricao.telefone}} <br>
+                        <strong>mensagem:</strong>{{inscricao.mensagem}} <br>
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+
+        {% else %}
+        <p>Não há inscrições</p>
+        {% endif %}
+            
+
+    </div>
+    
+</body>
+</html>
