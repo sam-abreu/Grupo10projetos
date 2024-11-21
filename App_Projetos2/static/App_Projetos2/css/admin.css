@@ -90,6 +90,15 @@ h1 {
     background: linear-gradient(135deg, #9c0170, #5b002b);
 }
 
+/* Botão de "visualizar inscrições" com gradiente */
+.trabalheconosco-button {
+    background: linear-gradient(135deg, #cc02ff, #8f0029);
+}
+
+.trabalheconosco-button:hover {
+    background: linear-gradient(135deg, #540169, #5c001a);
+}
+
 /* Adiciona um leve aumento no botão ao passar o mouse */
 .button-group button:hover {
     transform: scale(1.05);
