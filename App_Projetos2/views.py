@@ -73,6 +73,7 @@ def user_login(request):
 
 
 # View para adicionar uma nova doação
+@login_required
 def add_doacao(request):
     if request.method == "POST":
         nome_doador = request.POST.get("nome_doador")
@@ -90,6 +91,10 @@ def add_doacao(request):
             descricao=descricao
         )
         doacao.save()
+
+        profile = request.user.profile
+        profile.pontos += 5
+        profile.save()
         
         # Redireciona para uma página de confirmação ou para outra ação após salvar
         return redirect('home')
