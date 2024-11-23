@@ -6,13 +6,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toytopia</title>
-    <link rel="stylesheet" href="{% static 'App_Projetos2/css/styles.css' %}"> <!-- Link para o CSS -->
+    <link rel="stylesheet" href="{% static 'App_Projetos2/css/styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
     <header>
         <h1 id="titleh1">Toytopia</h1>
+        {% if user.is_authenticated %}
+        <div class="user-menu">
+            <button id="userButton" class="user-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 1.5c-3.3 0-9.8 1.7-9.8 5.1v2.4c0 .5.4.9.9.9h17.8c.5 0 .9-.4.9-.9v-2.4c0-3.4-6.5-5.1-9.8-5.1z" />
+                </svg>
+                {{ user.username }}
+            </button>
+        </div>
+
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <p>Pontos: {{ user.profile.pontos }}</p>
+                <button id="closeSidebar" class="close-sidebar">&times;</button>
+            </div>
+            <div class="sidebar-content">
+                <a href="{% url 'login' %}" class="logout-button">Logout</a>
+            </div>
+        </div>
+        <div id="overlay" class="overlay"></div>
+        {% endif %}
     </header>
 
     <div class="container">
@@ -21,21 +43,31 @@
             <p>Nossos brinquedos são feitos com materiais reciclados, promovendo a sustentabilidade e a responsabilidade
                 ambiental. Cada brinquedo que criamos é projetado para estimular a imaginação das crianças e contribuir
                 para um futuro mais verde.</p>
-            <br>        
-        <div class="button-group"> <!-- Grupo de botões -->
-            <a href="{% url 'doar' %}"><button class="doar">Doe Agora</button></a>
-            <a href="{% url 'comprar_brinquedo' %}"><button class="comprar_brinquedos">Comprar Brinquedos</button></a>
-            <a href="{% url 'sugestao_brinquedo'%}"><button class="sugestao_brinquedo">Sugestão Brinquedos</button></a>
-            <a href="{% url 'residuos'%}"><button class="residuos">Como São Usados Os Residuos</button></a>
-            <a href="{% url 'trabalhe_conosco'%}"><button class="trabalhe_conosco">Trabalhe Conosco</button></a>
-        </div>
+            <br>
+            <div class="button-group"> <!-- Grupo de botões -->
+                <a href="{% url 'doar' %}"><button class="doar">Doe Agora</button></a>
+                <a href="{% url 'comprar_brinquedo' %}"><button class="comprar_brinquedos">Comprar
+                        Brinquedos</button></a>
+                <a href="{% url 'sugestao_brinquedo'%}"><button class="sugestao_brinquedo">Sugestão
+                        Brinquedos</button></a>
+                <a href="{% url 'residuos'%}"><button class="residuos">Como São Usados Os Residuos</button></a>
+                <a href="{% url 'trabalhe_conosco'%}"><button class="trabalhe_conosco">Trabalhe Conosco</button></a>
             </div>
+        </div>
 
         <h2>NOSSOS VALORES</h2>
         <div class="gallery">
-            <div class="box">A ToyTopia é um projeto de impacto social, ambiental e econômico positivo. Visando fomentar oportunidades de trabalho e renda para mulheres em situação de vulnerabilidade social, através da produção de brinquedos educativos artesanais com reuso têxtil.</div>
-            <div class="box">A produção consciente e responsável dos brinquedos educativos é nosso objetivo, tendo em vista um produto sustentável com alto valor agregado. Oferecemos a logística da captação do resíduos têxteis domésticos e industriais para destinação correta, implantando políticas públicas voltadas para o combate as desigualdades de gênero, fortalecimento das comunidades de costura criativa.</div>
-            <div class="box">Além de um produto que desenvolve habilidades cognitivas. Nossa diferencial é o produto de lalto nível, utilizando resíduos têxteis. Aproximando oportunidades de trabalho e renda no território. Validar o produto digital que possa ofertar para a sociedade oportunidades de descarte, reuso e trabalho com resíduos têxteis.</div>
+            <div class="box">A ToyTopia é um projeto de impacto social, ambiental e econômico positivo. Visando fomentar
+                oportunidades de trabalho e renda para mulheres em situação de vulnerabilidade social, através da
+                produção de brinquedos educativos artesanais com reuso têxtil.</div>
+            <div class="box">A produção consciente e responsável dos brinquedos educativos é nosso objetivo, tendo em
+                vista um produto sustentável com alto valor agregado. Oferecemos a logística da captação do resíduos
+                têxteis domésticos e industriais para destinação correta, implantando políticas públicas voltadas para o
+                combate as desigualdades de gênero, fortalecimento das comunidades de costura criativa.</div>
+            <div class="box">Além de um produto que desenvolve habilidades cognitivas. Nossa diferencial é o produto de
+                lalto nível, utilizando resíduos têxteis. Aproximando oportunidades de trabalho e renda no território.
+                Validar o produto digital que possa ofertar para a sociedade oportunidades de descarte, reuso e trabalho
+                com resíduos têxteis.</div>
         </div>
     </div>
 
@@ -49,6 +81,7 @@
     </footer>
 
     <script>
+        // Script para colorir o título Toytopia
         const titleElement = document.getElementById("titleh1");
         const titleText = titleElement.innerText;
 
@@ -69,6 +102,39 @@
             // Adicionar o <span> ao título
             titleElement.appendChild(span);
         }
+
+        // Função para abrir a sidebar
+        const userButton = document.getElementById("userButton");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const userName = document.getElementById("user-name"); // Nome do usuário
+        const userIcon = document.getElementById("user-icon"); // Ícone do usuário
+
+        userButton.addEventListener("click", function () {
+            sidebar.style.width = "250px"; // Largura da sidebar ao abrir
+            overlay.style.display = "block"; // Exibe o overlay
+            userName.style.display = "none"; // Esconde o nome do usuário
+            userIcon.style.display = "none"; // Esconde o ícone
+        });
+
+        // Função para fechar a sidebar
+        const closeSidebarButton = document.getElementById("closeSidebar");
+
+        closeSidebarButton.addEventListener("click", function () {
+            sidebar.style.width = "0"; // Fecha a sidebar
+            overlay.style.display = "none"; // Esconde o overlay
+            userName.style.display = "block"; // Exibe o nome do usuário novamente
+            userIcon.style.display = "block"; // Exibe o ícone novamente
+        });
+
+        // Fechar a sidebar ao clicar no overlay
+        overlay.addEventListener("click", function () {
+            sidebar.style.width = "0"; // Fecha a sidebar
+            overlay.style.display = "none"; // Esconde o overlay
+            userName.style.display = "block"; // Exibe o nome do usuário novamente
+            userIcon.style.display = "block"; // Exibe o ícone novamente
+        });
+
     </script>
 </body>
 
