@@ -9,15 +9,44 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-y: auto;
 }
 
-/* Container */
+/* Estilo para o link da seta */
+.back-arrow {
+    position: fixed;  /* Fixa a seta no canto superior esquerdo da tela */
+    top: 20px;        /* Espaço do topo */
+    left: 20px;       /* Espaço da borda esquerda */
+    z-index: 1000;    /* Garante que a seta esteja acima de outros elementos */
+    text-decoration: none; /* Remove sublinhado */
+    color: #000;      /* Cor do ícone */
+}
+
+/* Estilo para o ícone SVG da seta */
+.back-arrow svg {
+    width: 30px;    /* Tamanho do ícone */
+    height: 30px;
+}
+
+/* Mudança de cor no hover (opcional) */
+.back-arrow:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+
+/* Container que envolve o formulário */
 .container {
-    max-width: 700px;
-    padding: 30px;
+    max-width: 700px;  /* Limita a largura do formulário */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 70px;  /* Espaçamento interno */
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -105,4 +134,27 @@ button[type="submit"]:hover {
 .result p {
     font-size: 18px;
     margin: 0;
+}
+
+
+.condicao {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilo para mensagens de sucesso */
+.condicao.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+/* Estilo para mensagens de erro */
+.condicao.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
 }

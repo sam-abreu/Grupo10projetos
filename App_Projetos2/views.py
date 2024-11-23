@@ -40,10 +40,19 @@ def trabalhe_conosco(request):
         telefone = request.POST['telefone']
         mensagem = request.POST['mensagem']
 
-        inscricao = Inscricao(nome=nome, email=email, telefone=telefone, mensagem=mensagem)
-        inscricao.save()
+        if nome and email and telefone and mensagem:
 
-        return HttpResponse("Inscrição enviada com sucesso!")  # Exibe uma confirmação
+            inscricao = Inscricao(nome=nome, email=email, telefone=telefone, mensagem=mensagem)
+            inscricao.save()
+
+            condicao = "Sua inscrição foi enviado com sucesso!"
+            tipo_condicao = "success"
+
+        else:
+            condicao = "Erro ao enviar inscrição. Preencha todos os campos e envie novamente"
+            tipo_condicao = "error"
+
+        return render(request, 'trabalhe_conosco.html', {'condicao': condicao, 'tipo_condicao':tipo_condicao})
     else:
         return render(request, 'trabalhe_conosco.html')
     

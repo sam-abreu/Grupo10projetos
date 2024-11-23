@@ -47,6 +47,7 @@
             var brinquedoSelecionado = brinquedoSelect.options[brinquedoSelect.selectedIndex];
             var brinquedoNome = brinquedoSelecionado.getAttribute('data-nome');
             var brinquedoPreco = brinquedoSelecionado.getAttribute('data-preco');
+            var brinquedoDesconto = brinquedoSelecionado.getAttribute('data-desconto');
             var quantidade = document.getElementById('quantidade').value;
 
             // Verifica se um brinquedo foi selecionado
@@ -58,7 +59,7 @@
             // Monta a mensagem para o WhatsApp
             var numeroWhatsapp = "5581994498361";
             var mensagem = "Olá, gostaria de comprar o brinquedo: " + brinquedoNome + 
-                           " (Preço: R$ " + brinquedoPreco + "), Quantidade: " + quantidade;
+                           " (Preço: R$ " + brinquedoPreco + "), Quantidade: " + quantidade + "\n-\n-\nPreço final, com desconto: " +brinquedoDesconto
 
             // Codifica a mensagem para a URL
             var link = "https://wa.me/" + numeroWhatsapp + "?text=" + encodeURIComponent(mensagem);
