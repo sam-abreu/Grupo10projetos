@@ -22,11 +22,11 @@
         <form id="comprar-brinquedo" onsubmit="return false;">
             {% csrf_token %}
             <div class="form-group">
-                <label for="brinquedo">Escolha um Brinquedo:</label>
+                <label for="brinquedo">Escolha um Brinquedo: // Seus pontos: {{ profile.pontos }}</label>
                 <select id="brinquedo" name="brinquedo">
                     {% for brinquedo in brinquedos %}
-                        <option value="{{ brinquedo.id }}" data-nome="{{ brinquedo.nome }}" data-preco="{{ brinquedo.preco }}">
-                            {{ brinquedo.nome }} - R$ {{ brinquedo.preco }}
+                        <option value="{{ brinquedo.id }}" data-nome="{{ brinquedo.nome }}" data-preco="{{ brinquedo.preco }}" data-desconto="{{ brinquedo.preco_com_desconto }}">
+                            {{ brinquedo.nome }} - R$ {{ brinquedo.preco }} - preço com desconto: {{ brinquedo.preco_com_desconto|floatformat:2 }}
                         </option>
                     {% empty %}
                         <option value="">Nenhum brinquedo disponível</option>

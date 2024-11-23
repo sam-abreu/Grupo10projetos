@@ -1,6 +1,6 @@
 
 from django.shortcuts import render, redirect
-from .models import Doacao, Brinquedo, Inscricao
+from .models import Doacao, Brinquedo, Inscricao, Profile
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
@@ -159,9 +159,19 @@ def add_brinquedo(request):
 
     return render(request, 'add_brinquedo.html')  # Renderiza um template para adicionar brinquedos
 
+@login_required
 def comprar_brinquedo(request):
     brinquedos = Brinquedo.objects.all()  # Puxa todos os brinquedos do banco de dados
-    return render(request, 'comprar_brinquedo.html', {'brinquedos': brinquedos})  # Passa os brinquedos para o template
+    profile = request.user.profile
+
+    for brinquedo in brinquedos:
+        brinquedo.preco_com_desconto = float(brinquedo.preco) - (profile.pontos / 100 * float(brinquedo.preco))
+
+    context = {'brinquedos': brinquedos,
+               'profile': profile
+            }
+
+    return render(request, 'comprar_brinquedo.html', context) 
 
 
 def sugestao_brinquedo(request):
