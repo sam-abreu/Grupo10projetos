@@ -33,7 +33,9 @@ def cadastro_user(request):
         else:
             user = User.objects.create_user(username=username, password=password)
             user.save()
-            return redirect('login')
+            mensagem = "Usuário criado com sucesso. Faça o login clicando no link abaixo."
+            tipo_mensagem = "success"
+            return render(request, 'cadastro_user.html', {'mensagem': mensagem, 'tipo_mensagem': tipo_mensagem})
         
     else:
         return render(request, 'cadastro_user.html')

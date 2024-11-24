@@ -81,8 +81,8 @@ body {
 
   
 .mensagem {
+  margin-top: 20px;
   padding: 10px;
-  margin-bottom: 20px;
   border-radius: 5px;
   text-align: center;
   font-weight: bold;
@@ -100,4 +100,8 @@ body {
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
+}
+
+.clique_aqui{
+  color: #1c009b;
 }
