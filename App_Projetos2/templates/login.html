@@ -19,13 +19,13 @@
         <input type="password" id="password" name="password" required><br><br>
 
         <button type="submit">Entrar</button>
-    </form>
 
-    {% if form.errors %}
-        <div>
-            <p>Erro: Usuário ou senha incorretos.</p>
+        {% if mensagem %}
+        <div class="mensagem {{ tipo_mensagem}}">
+            {{ mensagem }}
         </div>
     {% endif %}
+    </form>
 
     <p>Ainda não tem uma conta? <a href="{% url 'cadastro_user' %}" class="below-text">Clique aqui</a> para se cadastrar.</p> 
 </div>

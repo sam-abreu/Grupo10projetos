@@ -83,7 +83,9 @@ def user_login(request):
                 return redirect('home')
             
         else:
-            return HttpResponse('Usuário ou senha inválidos!')
+            mensagem = "Usuário ou senha inválido. Tente novamente."
+            tipo_mensagem = "error"
+            return render(request, 'login.html', {'mensagem': mensagem, 'tipo_mensagem': tipo_mensagem})
 
     else:
         return render(request, 'login.html')
