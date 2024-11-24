@@ -1,50 +1,49 @@
 /* Fundo gradiente para a página */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #00ffcc);
-    color: #333;
-    min-height: 100vh;
-    display:grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a11cb, #00ffcc); /* Degradê ajustado para tons de roxo e verde */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Cor do texto para contraste */
 }
 
 /* Contêiner principal para centralizar os elementos */
 .container {
     text-align: center;
-    padding: 40px;
+    padding: 30px; /* Reduzi o padding para ocupar menos espaço */
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 90%;
+    margin-bottom: auto; /* Força o contêiner para cima */
 }
 
 /* Estilo do título */
 h1 {
     font-size: 2.2em;
     color: #ffffff;
-    margin-bottom: 30px;
-    display: flex;
-    margin-top: 160px;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 20px; /* Reduzi o espaço entre o título e os botões */
+    text-align: center;
 }
 
 /* Grupo de botões */
 .button-group {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: -480px;
+    gap: 15px; /* Reduzi o espaçamento entre os botões */
     flex-wrap: wrap;
 }
 
 /* Estilo dos botões */
 .button-group button {
-    padding: 12px 25px;
-    font-size: 1em; 
+    padding: 10px 20px; /* Botões ligeiramente menores */
+    font-size: 0.95em; /* Ajustei o tamanho da fonte para combinar */
     font-weight: bold;
     color: #fff;
     border: none;
