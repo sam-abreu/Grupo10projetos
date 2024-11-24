@@ -1,7 +1,7 @@
 /* Fundo gradiente para a página */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #6a0dad, #ffffff);
+    background: linear-gradient(135deg, #6a11cb, #00ffcc);
     color: #333;
     min-height: 100vh;
     display:grid;
@@ -44,7 +44,7 @@ h1 {
 /* Estilo dos botões */
 .button-group button {
     padding: 12px 25px;
-    font-size: 1em;
+    font-size: 1em; 
     font-weight: bold;
     color: #fff;
     border: none;
