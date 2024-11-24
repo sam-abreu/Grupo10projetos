@@ -27,10 +27,12 @@
     <main>
         <div class="container">
 
-            <div class="condicao {{ tipo_condicao }}">
-                {{ condicao }}
-            </div>
-            
+            {% if condicao %}
+                <div class="condicao {{ tipo_condicao }}">
+                    {{ condicao }}
+                </div>
+            {% endif %}
+
             <h1 class="highlighted-title">Trabalhe Conosco</h1>
             <p>Estamos sempre em busca de pessoas talentosas! Preencha o formulário abaixo para se inscrever:</p>
 

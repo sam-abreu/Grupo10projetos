@@ -15,6 +15,10 @@ def home(request):
     return render(request, 'home.html')
 
 def cadastro_user(request):
+
+    mensagem = None
+    tipo_mensagem = None
+
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -22,7 +26,9 @@ def cadastro_user(request):
         user = User.objects.filter(username=username).first()
 
         if user:
-            return HttpResponse('Já existe um usuário com esse nome')
+            mensagem = "Já existe um usuário com esse nome. Tente novamente."
+            tipo_mensagem = "error"
+            return render(request, 'cadastro_user.html', {'mensagem': mensagem, 'tipo_mensagem':tipo_mensagem})
         
         else:
             user = User.objects.create_user(username=username, password=password)

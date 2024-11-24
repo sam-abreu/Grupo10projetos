@@ -21,7 +21,14 @@
 
         <button type="submit">Cadastrar</button>
     </form>
+    <br>
 
-    <p>Já tem uma conta? <a href="{% url 'login' %}">Clique aqui</a> para fazer login.</p>
+    {% if mensagem %}
+        <div class="mensagem {{ tipo_mensagem }}">
+            {{ mensagem }}
+        </div>
+    {% endif %}
+
+    <p>Já tem uma conta? <a href="{% url 'login' %}" class="clique_aqui">Clique aqui</a> para fazer login.</p>
 </body>
 </html>
