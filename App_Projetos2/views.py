@@ -101,22 +101,30 @@ def add_doacao(request):
         tipo_doacao = request.POST.get("tipo_doacao")
         descricao = request.POST.get("descricao")
 
-        # Criação de uma nova doação no banco de dados
-        doacao = Doacao(
-            nome_doador=nome_doador,
-            email_doador=email_doador,
-            telefone_doador=telefone_doador,
-            tipo_doacao=tipo_doacao,
-            descricao=descricao
-        )
-        doacao.save()
+        if nome_doador and email_doador and telefone_doador and tipo_doacao and descricao:
+            # Criação de uma nova doação no banco de dados
+            doacao = Doacao(
+                nome_doador=nome_doador,
+                email_doador=email_doador,
+                telefone_doador=telefone_doador,
+                tipo_doacao=tipo_doacao,
+                descricao=descricao
+            )
+            doacao.save()
 
-        profile = request.user.profile
-        profile.pontos += 5
-        profile.save()
+            mensagem = "Doação feita com sucesso! Você ganhou +5 pontos que serão revertidos em descontos nas compras!"
+            tipo_mensagem = "success"
+
+            profile = request.user.profile
+            profile.pontos += 5
+            profile.save()
+
+            return render(request, 'doar.html', {'mensagem': mensagem, 'tipo_mensagem': tipo_mensagem})
         
-        # Redireciona para uma página de confirmação ou para outra ação após salvar
-        return redirect('home')
+        else:
+            mensagem = "Preencha todos os campos para fazer uma doação."
+            tipo_mensagem = "error"
+            return render(request, 'doar.html', {'mensagem': mensagem, 'tipo_mensagem': tipo_mensagem})
 
     return render(request, 'doar.html')
 

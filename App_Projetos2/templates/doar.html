@@ -24,12 +24,12 @@
     
             <div class="form-group">
                 <label for="nome_doador">Nome do Doador</label>
-                <input type="text" id="nome_doador" name="nome_doador" required>
+                <input type="text" id="nome_doador" name="nome_doador" >
             </div>
     
             <div class="form-group">
                 <label for="email_doador">Email do Doador</label>
-                <input type="email" id="email_doador" name="email_doador" required>
+                <input type="email" id="email_doador" name="email_doador" >
             </div>
     
             <div class="form-group">
@@ -39,15 +39,21 @@
     
             <div class="form-group">
                 <label for="tipo_doacao">Tipo de Doação</label>
-                <input type="text" id="tipo_doacao" name="tipo_doacao" required>
+                <input type="text" id="tipo_doacao" name="tipo_doacao" >
             </div>
     
             <div class="form-group">
                 <label for="descricao">Descrição da Doação</label>
-                <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                <textarea id="descricao" name="descricao" rows="4" ></textarea>
             </div>
     
             <button type="submit" class="btn btn-primary">Enviar Doação</button>
+
+            {% if mensagem %}
+            <div class="mensagem {{tipo_mensagem}}">
+              {{ mensagem }}
+            </div>
+            {% endif %}
         </form>
 
       </main>
