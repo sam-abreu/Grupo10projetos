@@ -1,5 +1,13 @@
 describe('template spec', () =>{
     it('teste doar', () => {
+        cy.visit('http://127.0.0.1:8000/')
+        cy.wait(1000)
+        cy.get('#username').type("Mario")
+        cy.wait(1000)
+        cy.get('#password').type("yoshi")
+        cy.wait(1000)
+        cy.get('button').click()
+        cy.wait(2000)
         cy.visit('http://127.0.0.1:8000/doar/')
         cy.wait(1000)
         cy.get('input[name="nome_doador"]').type('Doador', { force: true });
@@ -18,6 +26,14 @@ describe('template spec', () =>{
     })
     it('teste doar NF', () =>{
         //Este código aqui se refere a um teste não funcional
+        cy.visit('http://127.0.0.1:8000/')
+        cy.wait(1000)
+        cy.get('#username').type("Mario")
+        cy.wait(1000)
+        cy.get('#password').type("yoshi")
+        cy.wait(1000)
+        cy.get('button').click()
+        cy.wait(2000)
         cy.visit('http://127.0.0.1:8000/doar/')
         cy.wait(1000)
         cy.get('input[name="nome_doador"]').type('Doador', { force: true });

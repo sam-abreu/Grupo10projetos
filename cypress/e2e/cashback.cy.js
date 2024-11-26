@@ -1,20 +1,24 @@
-describe('temlpate-spec', () =>{
-    it('teste pontos', () => {
+describe('template spec', ()=>{
+    it('teste cashback', () =>{
         cy.visit('http://127.0.0.1:8000/')
         cy.wait(1000)
-        cy.get('#username').type("Mario", {force : true})
+        cy.get('#username').type("Mario")
         cy.wait(1000)
-        cy.get('#password').type("yoshi", {force : true})
-        cy.get('button').click({force : true})
-        cy.wait(3000)          
+        cy.get('#password').type("yoshi")
+        cy.wait(1000)
+        cy.get('button').click()
+        cy.wait(2000)
         Cypress.on('uncaught:exception', (err, runnable) => {
             console.error('Erro detectado:', err);
             return false; 
           });
         cy.get('#userButton').click();
-        cy.wait(1000)
+        cy.wait(2000)
         cy.get('#closeSidebar').click({force : true});
         cy.wait(3000)
+        cy.get('.comprar_brinquedos').click()
+        cy.wait(2000)
+        cy.visit('http://127.0.0.1:8000/home/')
         cy.get('.doar').click()
         cy.wait(1000)
         cy.get('input[name="nome_doador"]').type('Doador', { force: true });
@@ -40,5 +44,7 @@ describe('temlpate-spec', () =>{
         cy.wait(2000)
         cy.get('#closeSidebar').click({force : true});
         cy.wait(3000)
+        cy.get('.comprar_brinquedos').click()
+        cy.wait(2000)
     })
 })
