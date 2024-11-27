@@ -8,8 +8,21 @@
     <link rel="stylesheet" href="{% static 'App_Projetos2/css/residuos.css' %}">
 </head>
 <body>
-    <header>
-        <h1>Uso de Resíduos nos Brinquedos</h1>
+    <header class="header-container">
+
+        <a href="{% url 'home' %}" class="back-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-circle-arrow-left">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M16 12H8" />
+                <path d="m12 8-4 4 4 4" />
+            </svg>
+        </a>
+
+        <div class="logo">
+            <img src="{% static 'App_Projetos2/imgs/whitelogo.PNG' %}" alt="Logo ToyTopia">
+        </div>
     </header>
 
     <div class="brinquedos-container">
@@ -20,9 +33,5 @@
             </div>
         {% endfor %}
     </div>
-
-    <footer>
-        <a href="{% url 'home' %}">Voltar para a Home</a>
-    </footer>
 </body>
 </html>

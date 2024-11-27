@@ -1,6 +1,6 @@
 /* Estilos para o corpo da página */
 body {
-    background: linear-gradient(135deg, #6a0dad, #ffffff);
+    background: #ffffff;
     font-family: Arial, sans-serif;
     color: #333;
     margin: 0;
@@ -10,6 +10,51 @@ body {
     align-items: center;
     flex-direction: column; /* Adicionando essa linha para o conteúdo ficar em coluna */
     min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.header-container {
+    height: 112px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ececec;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    height: 135px;
+    width: 296px;
+    object-fit: contain;
+  }
+
+/* Estilo para o link da seta */
+.back-arrow {
+    position: fixed;  /* Fixa a seta no canto superior esquerdo da tela */
+    top: 20px;        /* Espaço do topo */
+    left: 20px;       /* Espaço da borda esquerda */
+    z-index: 1000;    /* Garante que a seta esteja acima de outros elementos */
+    text-decoration: none; /* Remove sublinhado */
+    color: #000;      /* Cor do ícone */
+}
+
+/* Estilo para o ícone SVG da seta */
+.back-arrow svg {
+    width: 30px;    /* Tamanho do ícone */
+    height: 30px;
+}
+
+/* Mudança de cor no hover (opcional) */
+.back-arrow:hover {
+    color: #007bff; /* Cor ao passar o mouse */
 }
 
 /* Estilo para o título */
@@ -34,7 +79,7 @@ h1 {
 }
 
 .brinquedo-card {
-    background-color: #ffffff;
+    background-color: #ECECEC6E;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
