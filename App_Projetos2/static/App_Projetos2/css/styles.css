@@ -2,25 +2,26 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #6a11cb, #00ffcc);/* Degradê de tons de roxo */
+  background: white;/* Degradê de tons de roxo */
   color: #333;
 }
 
 header {
-  background-color: #ffffff;
+  background-color: #4972ec;
   color: #000; /* Cor do texto em preto */
   padding: 20px;
   text-align: center;
   border-bottom: 5px solid black; 
 }
-
-h1 {
-  margin: 0;
-  font-size: 2.5em; /* Tamanho da fonte */
+.logo img {
+  height: 135px;
+  width: 296px;
+  object-fit: contain;
 }
 
 h2 {
   text-align: center;
+  font-size: 36px;
 }
 
 .container {
@@ -31,7 +32,7 @@ h2 {
 
 .intro {
   padding: 20px;
-  background: #FFFFFF; /* Fundo branco */
+  background: #ffffff; /* Fundo branco */
   margin-top: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -143,8 +144,8 @@ h2 {
 }
 
 footer {
-  background-color: #1114117e; /* Cor de fundo do rodapé */
-  color: white; /* Cor do texto em branco */
+  background-color: #4972ec; /* Cor de fundo do rodapé */
+  color: rgb(0, 0, 0); /* Cor do texto em branco */
   text-align: center;
   padding: 10px 0;
   position: relative;
@@ -153,41 +154,10 @@ footer {
 }
 
 footer a {
-  color: white;
+  color: rgb(0, 0, 0);
   margin: 0 10px;
 }
 
-.color1 {
-  color: rgb(255, 0, 111);
-}
-
-.color2 {
-  color: rgb(191, 0, 255);
-}
-
-.color3 {
-  color: rgb(255, 111, 0);
-}
-
-.color4 {
-  color: rgb(255, 0, 111);
-}
-
-.color5 {
-  color: rgb(191, 0, 255);
-}
-
-.color6 {
-  color: rgb(2, 217, 255);
-}
-
-.color7 {
-  color: rgb(4, 251, 70);
-}
-
-.color8 {
-  color: rgb(255, 0, 111);
-}
 
 .gallery {
   display: flex;
@@ -202,10 +172,10 @@ footer a {
   padding: 20px;
   background-color: #FFFFFF;
   text-align: center;
-  border: 1px solid black;
-  font-size: 16px;
+  border: 1px solid rgb(7, 7, 7);
+  font-size: 18px;
   margin-top: 35px;
-  min-height: 150px; /* Define uma altura mínima para a caixa */
+  min-height: 100px; /* Define uma altura mínima para a caixa */
 }
 
 /* Estilos para a sidebar */
@@ -215,7 +185,7 @@ footer a {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-color: #4972ec;
   overflow-x: hidden;
   transition: 0.3s; /* Transição suave para a sidebar */
   padding-top: 60px;

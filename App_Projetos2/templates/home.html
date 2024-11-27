@@ -12,7 +12,9 @@
 
 <body>
     <header>
-        <h1 id="titleh1">Toytopia</h1>
+        <div class="logo">
+            <img src="{% static 'App_Projetos2/imgs/whitelogo-removebg-preview.png' %}" alt="Logo ToyTopia" id="titleh1">
+        </div>
         {% if user.is_authenticated %}
         <div class="user-menu">
             <button id="userButton" class="user-button">
@@ -23,7 +25,7 @@
                 {{ user.username }}
             </button>
         </div>
-
+    
         <div id="sidebar" class="sidebar">
             <div class="sidebar-header">
                 <p>Pontos: {{ user.profile.pontos }}</p>
@@ -36,10 +38,14 @@
         <div id="overlay" class="overlay"></div>
         {% endif %}
     </header>
+    
 
     <div class="container">
         <div class="intro">
             <h2>Bem-vindo à Toytopia!</h2>
+            <div class="imghome">
+            <img src="{% static 'App_Projetos2/imgs/criancas-brincar-2.jpg' %}" alt="">
+            </div>
             <p>Nossos brinquedos são feitos com materiais reciclados, promovendo a sustentabilidade e a responsabilidade
                 ambiental. Cada brinquedo que criamos é projetado para estimular a imaginação das crianças e contribuir
                 para um futuro mais verde.</p>
@@ -81,28 +87,6 @@
     </footer>
 
     <script>
-        // Script para colorir o título Toytopia
-        const titleElement = document.getElementById("titleh1");
-        const titleText = titleElement.innerText;
-
-        // Array de classes CSS com cores
-        const colors = ['color1', 'color2', 'color3', 'color4', 'color5', 'color6', 'color7', 'color8'];
-
-        // Limpar o conteúdo original do título
-        titleElement.innerText = '';
-
-        // Adicionar cada letra como um <span> com uma cor diferente
-        for (let i = 0; i < titleText.length; i++) {
-            const span = document.createElement('span');
-            span.innerText = titleText[i];
-
-            // Atribuir uma cor baseada na posição (circular pelo array de cores)
-            span.classList.add(colors[i % colors.length]);
-
-            // Adicionar o <span> ao título
-            titleElement.appendChild(span);
-        }
-
         // Função para abrir a sidebar
         const userButton = document.getElementById("userButton");
         const sidebar = document.getElementById("sidebar");
