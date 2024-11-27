@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,6 +8,12 @@
     <title>Visualizar Doações</title>
 </head>
 <body>
+    <header class="header">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'App_Projetos2/imgs/whitelogo.PNG' %}" alt="Logo ToyTopia" class="logo">
+        </a>
+    </header>
+
     <div class="container">
         <h1>Lista de Doações</h1>
 

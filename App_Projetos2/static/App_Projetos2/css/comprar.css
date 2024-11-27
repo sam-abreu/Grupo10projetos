@@ -1,137 +1,130 @@
-* {
+/* Estilos Gerais */
+body {
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body {
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, rgb(2, 217, 255), rgb(4, 251, 70));
-    margin: 0;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
-/* header */
+/* Cabeçalho */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #ffffffaf;
-    margin-top: 0;
-    padding: 10px 0;
-}
-
-.navbar {
-    width: 100vw;
-    height: 70px;
-    background-color: transparent;
-    padding: 0.8rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar h1 {
-    color: #1f2b5b;
-    font-size: 30px;
-    margin: 0 auto; /* Centraliza horizontalmente */
-    text-align: center;
+/* Estilo do link da seta */
+.back-arrow {
+    text-decoration: none;
+    color: #000;
 }
 
-
-img.logo {
-    height: 65px;
-    width: 110px;
+.back-arrow svg {
+    width: 30px;
+    height: 30px;
 }
 
-img.back {
-    width: 35px;
-    cursor: pointer;
-    margin-left: 5px;
+.back-arrow:hover {
+    color: #007bff;
 }
 
-/* main e o formulário */
-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+/* Logo */
+.logo img {
+    height: 60px; /* Ajuste o tamanho da logo conforme necessário */
+    width: auto;
+    object-fit: contain;
 }
 
-form {
-    width: 400px; 
-    background-color: #ffffffaf;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-    font-size: 16px;
+/* Estilo para o título da página */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
     color: #333;
 }
 
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
+/* Estilo do formulário */
+form {
+    margin-top: 150px; /* Ajuste para que o formulário não sobreponha o cabeçalho fixo */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
 }
 
-textarea {
-    resize: none; 
-    height: 100px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-button[type="submit"] {
-    padding: 10px;
-    background-color: rgb(4, 251, 70);
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
+label {
+    font-size: 18px;
+    color: #333;
 }
 
-button[type="submit"]:hover {
-    background-color: rgb(2, 131, 26);
-}
-
-/* Footer styling */
-footer {
+input[type="number"] {
     width: 100%;
-    background-color: #ffffffaf;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-}
-
-.comprar-btn{
-    padding: 10px;
-    background-color: rgb(4, 251, 70);
-    border: none;
-    color: white;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.comprar-btn:hover {
-    background-color: rgb(2, 131, 26);
+/* Botão de Compra */
+button.comprar-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button.comprar-btn:hover {
+    background-color: #45a049;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo - Alinhar à esquerda */
+.logo {
+    margin-left: 0;  /* Remove espaçamento extra à esquerda */
+    margin-right: auto; /* Garante que a logo esteja à esquerda */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente a imagem no cabeçalho */
+}
+
+.logo img {
+    height: 135px; /* Ajuste o tamanho da logo */
+    width: auto;
+    object-fit: contain;
 }

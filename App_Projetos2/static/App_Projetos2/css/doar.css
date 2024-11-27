@@ -1,146 +1,185 @@
-* {
+/* Estilos Gerais */
+body {
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(135deg, #6a0dad, #ffffff);
-    margin: 0;
-    overflow-x: hidden;
-}
-
-/* header */
-header {
-    width: 100%;
-    background-color: #ffffffaf;
-    margin-top: 0;
-    padding: 10px 0;
-}
-
-.navbar {
-    width: 100vw;
-    height: 70px;
-    background-color: transparent;
-    padding: 0.8rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar h1 {
-    color: #6a0dad;
-    font-size: 30px;
-    margin: 0 auto; /* Centraliza horizontalmente */
-    text-align: center;
-}
-
-
-img.logo {
-    height: 65px;
-    width: 110px;
-}
-
-img.back {
-    width: 35px;
-    cursor: pointer;
-    margin-left: 5px;
-}
-
-/*main e o formulário */
-main {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
-form {
-    width: 400px; 
-    background-color: #ffffffaf;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar a caixinha */
+.header-container {
+    height: 112px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ececec;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    height: 135px;
+    width: 296px;
+    object-fit: contain;
+  }
+
+/* Estilo para o link da seta */
+.back-arrow {
+    position: fixed;  /* Fixa a seta no canto superior esquerdo da tela */
+    top: 20px;        /* Espaço do topo */
+    left: 20px;       /* Espaço da borda esquerda */
+    z-index: 1000;    /* Garante que a seta esteja acima de outros elementos */
+    text-decoration: none; /* Remove sublinhado */
+    color: #000;      /* Cor do ícone */
+}
+
+/* Estilo para o ícone SVG da seta */
+.back-arrow svg {
+    width: 30px;    /* Tamanho do ícone */
+    height: 30px;
+}
+
+/* Mudança de cor no hover (opcional) */
+.back-arrow:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+
+/* Container que envolve o formulário */
+.container {
+    max-width: 700px;  /* Limita a largura do formulário */
+    margin-top: 200px;
+    margin-bottom: 50px;
+    padding: 70px;  /* Espaçamento interno */
+    background-color: #ECECEC6E;
+    border-radius: 60px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Título */
+.highlighted-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+form {
+    margin-top: 25px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 20px;
 }
 
+/* Labels */
 label {
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #333;
+    font-size: 18px;
+    color: #000000;
+    display: block;
+    margin-bottom: 8px;
 }
 
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
-}
-
+/* Campos de Entrada */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
 textarea {
-    resize: none; 
-    height: 100px;
+    width: 100%;
+    max-width: 500px; /* Tamanho máximo para centralização */
+    margin: 0 auto;   /* Centraliza horizontalmente */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #000000;
+    transition: border-color 0.3s;
 }
 
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #7D99EC;
+    outline: none;
+    box-shadow: 0 0 15px #4972ec;
+}
+
+/* Botão de Envio */
 button[type="submit"] {
-    padding: 10px;
-    background-color: #5a0bba;
+    width: 100%;
+    padding: 12px;
+    background-color: #7D99EC;
+    color: #fff;
+    font-size: 18px;
     border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 10px;
     transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #310467;
+    background-color: #4972ec;
+}
+
+/* Resultados */
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f9f1ff;
+    border: 1px solid #6a0dad;
+    border-radius: 8px;
+    color: #333;
+}
+
+.result h3 {
+    color: #6a0dad;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.result p {
+    font-size: 18px;
+    margin: 0;
 }
 
 
-
-/* Footer*/
-footer {
-    width: 100%;
-    background-color: #ffffffaf;
-    text-align: center;
+.condicao {
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-}
-
-.mensagem {
-    padding: 10px;
-    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
-  }
-  
-  /* Estilo para mensagens de sucesso */
-  .mensagem.success {
+}
+
+/* Estilo para mensagens de sucesso */
+.condicao.success {
     color: #155724;
     background-color: #d4edda;
     border: 1px solid #c3e6cb;
-  }
-  
-  /* Estilo para mensagens de erro */
-  .mensagem.error {
+}
+
+/* Estilo para mensagens de erro */
+.condicao.error {
     color: #721c24;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
-  }
+}

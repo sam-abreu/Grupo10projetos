@@ -1,61 +1,38 @@
-/* Estilos gerais para a página */
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #7b2cbf, #9d4edd, #c77dff); /* Degradê de tons de roxo */
-    color: #333;
+/* Estilo do Cabeçalho */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Cor de fundo do cabeçalho */
+    box-shadow: 0px 4px 10px #007bff(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ececec;
+    z-index: 1000;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
+    justify-content: flex-start; /* Alinha à esquerda */
 }
 
-/* Container para centralizar o conteúdo */
+/* Estilo do Logo */
+.logo {
+    height: 135px; /* Altura do logo */
+    width: auto;  /* Mantém a proporção */
+    object-fit: contain; /* Ajusta a imagem sem distorção */
+    cursor: pointer; /* Cursor ao passar o mouse */
+}
+
+/* Espaçamento para evitar sobreposição do cabeçalho fixo */
 .container {
-    width: 80%;
-    max-width: 800px;
-    background-color: rgba(204, 95, 247, 0.9); /* Fundo levemente translúcido */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 200px; /* Ajuste conforme a altura do cabeçalho */
 }
 
-/* Estilo do título */
-h1 {
-    text-align: center;
-    color: #5a189a; /* Roxo escuro */
-    margin-bottom: 20px;
+/* Mudar a cor do texto para azul */
+body {
+    color: darkblue; /* Define a cor azul para o texto */
 }
 
-/* Estilo da lista de doações */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    background-color: #e0aaff; /* Lilás claro para destacar cada doação */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-li strong {
-    color: #5a189a; /* Roxo escuro */
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: #d4a1f7;
-    margin: 10px 0;
-}
-
-/* Estilo para a mensagem de nenhuma doação */
-p {
-    text-align: center;
-    color: #6a4c93;
-    font-size: 1.2em;
-    font-weight: bold;
+/* Estilo para os títulos (se necessário) */
+h1, h2, h3, p, li {
+    color: darkblue; /* Altera a cor do texto dos títulos e parágrafos */
 }
