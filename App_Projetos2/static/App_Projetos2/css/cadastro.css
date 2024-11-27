@@ -1,107 +1,131 @@
 /* Estilos gerais */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    background: linear-gradient(135deg, #6a0dad, #ffffff);
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Título da página */
-  h2 {
-    font-size: 24px;
-    color: #6a0dad;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* Container do formulário */
-  form {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-  }
-  
-  /* Estilos dos rótulos */
-  form label {
-    font-size: 16px;
-    color: #333333;
-  }
-  
-  /* Estilos dos campos de entrada */
-  form input[type="text"],
-  form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0 16px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  /* Botão de envio */
-  button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #6a0dad;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #5c009b;
-  }
-  
-  /* Mensagem abaixo do formulário */
-  p {
-    font-size: 16px;
-    color: #333333;
-    text-align: center;
-  }
-  
-  p a {
-    color: #6a0dad;
-    text-decoration: none;
-  }
-  
-  p a:hover {
-    text-decoration: underline;
-  }
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
 
-  
-.mensagem {
-  margin-top: 20px;
+/* Cabeçalho */
+.header-container {
+  height: 112px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #ececec;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 135px;
+  width: 296px;
+  object-fit: contain;
+}
+
+/* Container do formulário */
+.form-container {
+  margin-top: 200px;
+  background-color: #ECECEC6E;
+  border-radius: 60px;
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Título acima do formulário */
+.above-text {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* Estilos dos rótulos */
+form label {
+  font-size: 16px;
+  color: #333333;
+}
+
+/* Estilos dos campos de entrada */
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
   padding: 10px;
+  margin: 8px 0 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Botão de envio */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #7D99EC;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #4972ec;
+}
+
+/* Link de navegação */
+.below-text {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.below-text a {
+  color: #6a0dad;
+  text-decoration: none;
+}
+
+.below-text a:hover {
+  text-decoration: underline;
+}
+
+/* Mensagens de feedback */
+.mensagem {
+  padding: 10px;
+  margin-top: 20px;
   border-radius: 5px;
   text-align: center;
   font-weight: bold;
 }
 
-/* Estilo para mensagens de sucesso */
 .mensagem.success {
   color: #155724;
   background-color: #d4edda;
   border: 1px solid #c3e6cb;
 }
 
-/* Estilo para mensagens de erro */
 .mensagem.error {
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
 }
 
-.clique_aqui{
-  color: #1c009b;
+/* Rodapé do formulário */
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333333;
 }

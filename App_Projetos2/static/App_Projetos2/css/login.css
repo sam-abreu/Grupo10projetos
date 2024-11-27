@@ -1,16 +1,48 @@
 body {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background: linear-gradient(135deg, #6a0dad, #ffffff);
+  background: #ffffff;
   font-family: Arial, sans-serif;
 }
 
-.form-container {
+.header-container {
+  height: 112px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
   background-color: #ffffff;
-  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #ececec;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 135px;
+  width: 296px;
+  object-fit: contain;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  margin-left: auto;
+  text-align: center;
+}
+
+.form-container {
+  margin-top: 200px;
+  background-color: #ECECEC6E;
+  border-radius: 60px;
   padding: 40px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -20,7 +52,7 @@ body {
 
 .above-text, .below-text {
   font-size: 18px;
-  color: #6a0dad;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -46,13 +78,13 @@ button[type="submit"] {
   border-radius: 5px;
   font-size: 16px;
   color: #ffffff;
-  background-color: #6a0dad;
+  background-color: #7D99EC;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button[type="submit"]:hover {
-  background-color: #5c009b;
+  background-color: #4972ec;
 }
 
 form div p {
@@ -69,7 +101,6 @@ form div p {
   text-decoration: underline;
 }
 
-
 .mensagem {
   padding: 10px;
   margin-top: 20px;
@@ -78,14 +109,12 @@ form div p {
   font-weight: bold;
 }
 
-/* Estilo para mensagens de sucesso */
 .mensagem.success {
   color: #155724;
   background-color: #d4edda;
   border: 1px solid #c3e6cb;
 }
 
-/* Estilo para mensagens de erro */
 .mensagem.error {
   color: #721c24;
   background-color: #f8d7da;
@@ -94,7 +123,7 @@ form div p {
 
 .form-footer {
   text-align: center;
-  margin-top: 20px; /* Espaço entre o formulário e o texto */
-  font-size: 14px; /* Tamanho da fonte consistente */
-  color: #333333; /* Cor neutra para o texto */
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333333;
 }
