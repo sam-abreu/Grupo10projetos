@@ -1,0 +1,85 @@
+/* Estilo do Cabeçalho */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Cor de fundo do cabeçalho */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ececec;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha à esquerda */
+}
+/* Estilo para o link da seta */
+.back-arrow {
+    position: fixed;  /* Fixa a seta no canto superior esquerdo da tela */
+    top: 20px;        /* Espaço do topo */
+    left: 20px;       /* Espaço da borda esquerda */
+    z-index: 1000;    /* Garante que a seta esteja acima de outros elementos */
+    text-decoration: none; /* Remove sublinhado */
+    color: #000;      /* Cor do ícone */
+}
+
+/* Estilo para o ícone SVG da seta */
+.back-arrow svg {
+    width: 30px;    /* Tamanho do ícone */
+    height: 30px;
+}
+
+/* Mudança de cor no hover (opcional) */
+.back-arrow:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* Estilo do Logo */
+.logo {
+    height: 135px; /* Altura do logo */
+    width: auto;  /* Mantém a proporção */
+    object-fit: contain; /* Ajusta a imagem sem distorção */
+    cursor: pointer; /* Cursor ao passar o mouse */
+}
+
+/* Espaçamento para evitar sobreposição do cabeçalho fixo */
+.container {
+    margin-top: 200px; /* Ajuste conforme a altura do cabeçalho */
+    padding: 0 20px; /* Adiciona algum espaço nas laterais */
+}
+
+/* Mudar a cor do texto para azul */
+body {
+    color: darkblue; /* Define a cor azul para o texto */
+    font-family: Arial, sans-serif; /* Define uma fonte simples e legível */
+}
+
+/* Estilo para os títulos (se necessário) */
+h1, h2, h3, p, li {
+    color: darkblue; /* Altera a cor do texto dos títulos e parágrafos */
+    font-weight: bold; /* Deixa os títulos em negrito */
+}
+
+/* Estilo para a lista de voluntários */
+ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px; /* Espaçamento entre os itens da lista */
+    padding: 10px;
+    background-color: #f9f9f9; /* Cor de fundo dos itens */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para os itens */
+}
+
+li strong {
+    color: #007bff; /* Cor azul para os rótulos */
+}
+
+/* Estilo para a mensagem quando não há inscrições */
+p {
+    font-style: italic;
+    color: #888; /* Cor mais suave para a mensagem de sem inscrições */
+}

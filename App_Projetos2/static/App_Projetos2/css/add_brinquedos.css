@@ -1,110 +1,134 @@
+/* Estilos Gerais */
 body {
-    font-family: 'Arial', sans-serif;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #fce4ec, #ab47bc); 
-    color: #333;
-    min-height: 100vh; 
-}
-
-/* Cabeçalho */
-header {
-    background-color: #ab47bc; 
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-}
-
-header h1 {
-    margin: 0;
-    font-size: 28px;
-    color: white; 
-}
-
-/* formulário */
-main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh; 
-    padding: 20px;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
-form {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+.header-container {
+    height: 112px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 400px; 
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ececec;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    margin-left: 60px;
+    height: 135px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Estilo para o link da seta */
+.back-arrow {
+    position: fixed;  /* Fixa a seta no canto superior esquerdo da tela */
+    top: 20px;        /* Espaço do topo */
+    left: 20px;       /* Espaço da borda esquerda */
+    z-index: 1000;    /* Garante que a seta esteja acima de outros elementos */
+    text-decoration: none; /* Remove sublinhado */
+    color: #000;      /* Cor do ícone */
+}
+
+.back-arrow svg {
+    width: 30px;    /* Tamanho do ícone */
+    height: 30px;
+}
+
+/* Mudança de cor no hover */
+.back-arrow:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* Conteúdo Principal */
+main {
+    width: 100%;
+    max-width: 600px;
+    margin: 150px auto; /* Espaço superior devido ao header fixo */
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    text-align: center;
+    
+}
+
+.highlighted-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 label {
-    display: block;
     font-size: 16px;
-    margin-bottom: 5px;
-    color: #388e3c; 
+    margin-bottom: 8px;
+    color: #555;
 }
 
-select,
-input[type="number"] {
-    width: 100%;
+input[type="text"], textarea {
     padding: 10px;
-    border: 1px solid #ffcc80; 
-    border-radius: 10px;
-    font-size: 14px;
-    box-sizing: border-box;
-    background-color: #fce4ec; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
 }
 
-select:focus,
-input[type="number"]:focus {
-    border-color: #ff7043; 
+input[type="text"]:focus, textarea:focus {
+    border-color: #7D99EC;
     outline: none;
+    box-shadow: 0 0 8px rgba(125, 153, 236, 0.5);
 }
 
-button {
-    background-color: #ff7043; 
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #7D99EC;
     color: white;
     border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 25px;
+    border-radius: 5px;
+    font-size: 18px;
     cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-    background-color: #f4511e; 
+button[type="submit"]:hover {
+    background-color: #4972ec;
+    transform: scale(1.02);
 }
-
-/* Rodapé */
-footer {
-    background-color: #333; 
-    color: #fff; 
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-    form {
-        padding: 15px;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    button {
-        padding: 10px 15px;
-    }
-}
-

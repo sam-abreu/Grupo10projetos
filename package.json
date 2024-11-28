@@ -1,0 +1,15 @@
+{
+  "name": "grupo10projetos",
+  "version": "1.0.0",
+  "description": "<!DOCTYPE html>\r <html lang=\"pt-BR\">\r <head>\r     <meta charset=\"UTF-8\">\r     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r </head>\r <body>\r <br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.15.2"
+  }
+}

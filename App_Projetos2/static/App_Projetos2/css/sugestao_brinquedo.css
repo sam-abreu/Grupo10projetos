@@ -1,0 +1,176 @@
+/* Estilos Gerais */
+body {
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.header-container {
+    height: 112px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ececec;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 135px;
+    width: 296px;
+    object-fit: contain;
+}
+
+/* Estilo para o link da seta */
+.back-arrow {
+    position: fixed;  /* Fixa a seta no canto superior esquerdo da tela */
+    top: 20px;        /* Espaço do topo */
+    left: 20px;       /* Espaço da borda esquerda */
+    z-index: 1000;    /* Garante que a seta esteja acima de outros elementos */
+    text-decoration: none; /* Remove sublinhado */
+    color: #000;      /* Cor do ícone */
+}
+
+/* Estilo para o ícone SVG da seta */
+.back-arrow svg {
+    width: 30px;    /* Tamanho do ícone */
+    height: 30px;
+}
+
+/* Mudança de cor no hover (opcional) */
+.back-arrow:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* Container que envolve o formulário */
+.container {
+    max-width: 700px;  /* Limita a largura do formulário */
+    margin-top: 200px;
+    margin-bottom: 50px;
+    padding: 70px;  /* Espaçamento interno */
+    background-color: #ECECEC6E;
+    border-radius: 60px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Título */
+.highlighted-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+form {
+    margin-top: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    font-size: 18px;
+    color: #000000;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Campos de Entrada */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #000000;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #7D99EC;
+    outline: none;
+    box-shadow: 0 0 15px #4972ec;
+}
+
+/* Botão de Envio */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #7D99EC;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4972ec;
+}
+
+/* Resultados */
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f9f1ff;
+    border: 1px solid #4972ec;
+    border-radius: 8px;
+    color: #4972ec;
+}
+
+.result h3 {
+    color: #4972ec;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.result p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.condicao {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilo para mensagens de sucesso */
+.condicao.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+/* Estilo para mensagens de erro */
+.condicao.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}

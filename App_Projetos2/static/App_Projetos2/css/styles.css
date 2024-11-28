@@ -2,25 +2,26 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: rgb(4, 251, 70); /* Fundo neutro */
+  background: white;/* Degradê de tons de roxo */
   color: #333;
 }
 
 header {
-  background-color: #ffffff;
+  background-color: #4972ec;
   color: #000; /* Cor do texto em preto */
   padding: 20px;
   text-align: center;
   border-bottom: 5px solid black; 
 }
-
-h1 {
-  margin: 0;
-  font-size: 2.5em; /* Tamanho da fonte */
+.logo img {
+  height: 135px;
+  width: 296px;
+  object-fit: contain;
 }
 
 h2 {
   text-align: center;
+  font-size: 36px;
 }
 
 .container {
@@ -31,7 +32,7 @@ h2 {
 
 .intro {
   padding: 20px;
-  background: #FFFFFF; /* Fundo branco */
+  background: #ffffff; /* Fundo branco */
   margin-top: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -45,14 +46,16 @@ h2 {
 }
 
 .button-group {
-  display: flex; /* Usar flexbox para alinhar os botões */
+  display: flex; /* Alinha os botões em uma linha */
+  justify-content: center; /* Centraliza os botões */
   gap: 10px; /* Espaço entre os botões */
   margin-top: 20px; /* Espaço acima dos botões */
 }
 
+
 .doar {
-  background-color: rgb(255, 0, 111);
-  color: white;
+  background-color: #ff5e78;
+  color: black;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -66,8 +69,8 @@ h2 {
 }
 
 .comprar_brinquedos {
-  background-color: rgb(0, 140, 255); /* Azul para o botão de compra */
-  color: white; /* Texto em branco */
+  background-color: #50c878; /* Azul para o botão de compra */
+  color: black; /* Texto em branco */
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -81,8 +84,8 @@ h2 {
 }
 
 .add-brinquedos {
-  background-color: rgb(255, 149, 0);
-  color: white;
+  background-color: #f8de7e;
+  color: black;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -94,9 +97,55 @@ h2 {
 .add-brinquedos:hover {
   background-color: rgb(255, 149, 0); /* Muda a cor ao passar o mouse */
 }
+
+.sugestao_brinquedo {
+  background-color: #f8de7e;; /* Cor de fundo para o botão sugestão */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Efeito de transição */
+}
+
+.sugestao_brinquedo:hover {
+  background-color: rgb(76, 153, 0); /* Cor ao passar o mouse */
+}
+
+.residuos{
+  background-color: #1fb6ff; /* Cor de fundo para o botão sugestão */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Efeito de transição */
+}
+
+.residuos:hover {
+  background-color: rgb(204,204,0); /* Cor ao passar o mouse */
+}
+
+.trabalhe_conosco {
+  background-color: #ff6ec7;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Efeito de transição *//
+}
+
+.trabalhe_conosco:hover {
+  background-color: darkorange;
+}
+
 footer {
-  background-color: #1114117e; /* Cor de fundo do rodapé */
-  color: white; /* Cor do texto em branco */
+  background-color: #4972ec; /* Cor de fundo do rodapé */
+  color: rgb(0, 0, 0); /* Cor do texto em branco */
   text-align: center;
   padding: 10px 0;
   position: relative;
@@ -105,41 +154,10 @@ footer {
 }
 
 footer a {
-  color: white;
+  color: rgb(0, 0, 0);
   margin: 0 10px;
 }
 
-.color1 {
-  color: rgb(255, 0, 111);
-}
-
-.color2 {
-  color: rgb(191, 0, 255);
-}
-
-.color3 {
-  color: rgb(255, 111, 0);
-}
-
-.color4 {
-  color: rgb(255, 0, 111);
-}
-
-.color5 {
-  color: rgb(191, 0, 255);
-}
-
-.color6 {
-  color: rgb(2, 217, 255);
-}
-
-.color7 {
-  color: rgb(4, 251, 70);
-}
-
-.color8 {
-  color: rgb(255, 0, 111);
-}
 
 .gallery {
   display: flex;
@@ -154,8 +172,167 @@ footer a {
   padding: 20px;
   background-color: #FFFFFF;
   text-align: center;
-  border: 1px solid black;
-  font-size: 16px;
+  border: 1px solid rgb(7, 7, 7);
+  font-size: 18px;
   margin-top: 35px;
-  min-height: 150px; /* Define uma altura mínima para a caixa */
+  min-height: 100px; /* Define uma altura mínima para a caixa */
+}
+
+/* Estilos para a sidebar */
+.sidebar {
+  height: 100%;
+  width: 0; /* Inicialmente escondida */
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #4972ec;
+  overflow-x: hidden;
+  transition: 0.3s; /* Transição suave para a sidebar */
+  padding-top: 60px;
+  z-index: 1000; /* Certifique-se de que a sidebar esteja acima de outros elementos */
+}
+
+.sidebar .sidebar-header {
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar .sidebar-content {
+  padding: 10px;
+  color: white;
+}
+.highlights {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.highlight-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card i {
+  font-size: 48px;
+  color: #4972ec;
+  margin-bottom: 10px;
+}
+
+.sidebar .logout-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#overlay {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.user-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.close-sidebar {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Estilos para o botão do usuário */
+.user-button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    font-size: 16px;  /* Tamanho do texto do nome do usuário */
+}
+
+.user-button svg {
+    height: 16px;  /* Tamanho do SVG igual ao tamanho do texto */
+    width: 16px;   /* Largura do SVG igual ao tamanho do texto */
+    margin-right: 8px;  /* Espaço entre o ícone e o nome */
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* Aumentado de 800px para 900px */
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 500px; /* Aumentado de 400px para 450px */
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 10px;
+  z-index: 100;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
 }

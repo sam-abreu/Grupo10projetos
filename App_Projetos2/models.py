@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Brinquedo(models.Model):
@@ -22,4 +23,19 @@ class Doacao(models.Model):
 
     def __str__(self):
         return f"Nome: {self.nome_doador} / Número: {self.telefone_doador} / Tipo: {self.tipo_doacao}"
+
+class Inscricao(models.Model):
+    nome = models.CharField(max_length=256)
+    email = models.EmailField()
+    telefone = models.CharField(max_length=15)
+    mensagem = models.TextField()
+
+    def __str__(self):
+        return self.nome
     
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    pontos = models.IntegerField(default=0)
+
+    def __str__(self):
+        return f"Nome: {self.user.username} / Pontos: {self.pontos}"

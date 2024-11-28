@@ -1,0 +1,125 @@
+/* Fundo branco para a página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF; /* Fundo branco */
+    font-family: 'Arial', sans-serif;
+    color: #333333; /* Texto em tom cinza-escuro */
+}
+
+/* Contêiner principal para centralizar os elementos */
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(240, 240, 240, 0.95); /* Fundo levemente cinza */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    margin-bottom: auto;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2.2em;
+    color: #1A1A1A; /* Preto suave */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 22px;
+    color: #333333; /* Cinza-escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Estilo dos botões */
+.button-group button {
+    padding: 10px 20px;
+    font-size: 0.95em;
+    font-weight: bold;
+    color: #FFFFFF; /* Texto branco */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de "Adicionar Brinquedo" */
+.add-brinquedo {
+    background: linear-gradient(135deg, #3A7BD5, #4A90E2); /* Azul médio */
+}
+
+.add-brinquedo:hover {
+    background: linear-gradient(135deg, #4A90E2, #3A7BD5); /* Reverso no hover */
+}
+
+/* Botão de "Visualizar Doações" */
+.visualizar-doacoes {
+    background: linear-gradient(135deg, #5B9BE0, #72A8E8); /* Azul mais claro */
+}
+
+.visualizar-doacoes:hover {
+    background: linear-gradient(135deg, #72A8E8, #5B9BE0); /* Reverso no hover */
+}
+
+/* Botão da "Home" */
+.home-button {
+    background: linear-gradient(135deg, #2C6DAB, #3F7EBE); /* Azul escuro */
+}
+
+.home-button:hover {
+    background: linear-gradient(135deg, #3F7EBE, #2C6DAB); /* Reverso no hover */
+}
+
+/* Botão de "Baixar Relatório" */
+.excel-button {
+    background: linear-gradient(135deg, #1E6091, #3A80B0); /* Azul profundo */
+}
+
+.excel-button:hover {
+    background: linear-gradient(135deg, #3A80B0, #1E6091); /* Reverso no hover */
+}
+
+/* Botão de "Lista de Voluntários" */
+.trabalheconosco-button {
+    background: linear-gradient(135deg, #347BB7, #5A9BE0); /* Azul clássico */
+}
+
+.trabalheconosco-button:hover {
+    background: linear-gradient(135deg, #5A9BE0, #347BB7); /* Reverso no hover */
+}
+
+/* Animação dos botões ao carregar */
+.button-group button {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
