@@ -7,10 +7,11 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #6a11cb, #00ffcc); /* Degradê ajustado para tons de roxo e verde */
+    background: #4972ec; /* Degradê ajustado para tons de roxo e verde */
     font-family: 'Arial', sans-serif;
     color: #333; /* Cor do texto para contraste */
 }
+
 
 /* Contêiner principal para centralizar os elementos */
 .container {
@@ -27,7 +28,7 @@ body {
 /* Estilo do título */
 h1 {
     font-size: 2.2em;
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 20px; /* Reduzi o espaço entre o título e os botões */
     text-align: center;
 }
@@ -39,13 +40,18 @@ h1 {
     gap: 15px; /* Reduzi o espaçamento entre os botões */
     flex-wrap: wrap;
 }
-
+.subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
 /* Estilo dos botões */
 .button-group button {
     padding: 10px 20px; /* Botões ligeiramente menores */
     font-size: 0.95em; /* Ajustei o tamanho da fonte para combinar */
     font-weight: bold;
-    color: #fff;
+    color: #000000;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -55,11 +61,11 @@ h1 {
 
 /* Botão de "Adicionar Brinquedo" com gradiente */
 .add-brinquedo {
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    background: linear-gradient(135deg, #983514, #f33105);
 }
 
 .add-brinquedo:hover {
-    background: linear-gradient(135deg, #2563eb, #1e40af);
+    background: linear-gradient(135deg, #f33105, #b73011);
 }
 
 /* Botão de "Visualizar Doações" com gradiente */

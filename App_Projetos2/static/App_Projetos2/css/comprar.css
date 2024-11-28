@@ -86,7 +86,7 @@ input[type="number"] {
 
 /* Botão de Compra */
 button.comprar-btn {
-    background-color: #4CAF50;
+    background-color: #4972ec;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -98,7 +98,7 @@ button.comprar-btn {
 }
 
 button.comprar-btn:hover {
-    background-color: #45a049;
+    background-color: #305de6;
 }
 
 /* Cabeçalho */

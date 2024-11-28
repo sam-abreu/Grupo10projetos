@@ -43,8 +43,16 @@
     <div class="container">
         <div class="intro">
             <h2>Bem-vindo à Toytopia!</h2>
-            <div class="imghome">
-            <img src="{% static 'App_Projetos2/imgs/criancas-brincar-2.jpg' %}" alt="">
+            <div class="carousel">
+                <div class="carousel-track">
+                    <img src="{% static 'App_Projetos2/imgs/foto2.jpg' %}" alt="Imagem 2" class="carousel-item">
+                    <img src="{% static 'App_Projetos2/imgs/foto3.png' %}" alt="Imagem 3" class="carousel-item">
+                    <img src="{% static 'App_Projetos2/imgs/foto4.jpg' %}" alt="Imagem 4" class="carousel-item">
+                    <img src="{% static 'App_Projetos2/imgs/foto5.png' %}" alt="Imagem 5" class="carousel-item">
+                    <img src="{% static 'App_Projetos2/imgs/foto6.jpg' %}" alt="Imagem 5" class="carousel-item">
+                </div>
+                <button class="carousel-btn prev-btn">&lt;</button>
+                <button class="carousel-btn next-btn">&gt;</button>
             </div>
             <p>Nossos brinquedos são feitos com materiais reciclados, promovendo a sustentabilidade e a responsabilidade
                 ambiental. Cada brinquedo que criamos é projetado para estimular a imaginação das crianças e contribuir
@@ -60,22 +68,8 @@
                 <a href="{% url 'trabalhe_conosco'%}"><button class="trabalhe_conosco">Trabalhe Conosco</button></a>
             </div>
         </div>
-
-        <h2>NOSSOS VALORES</h2>
-        <div class="gallery">
-            <div class="box">A ToyTopia é um projeto de impacto social, ambiental e econômico positivo. Visando fomentar
-                oportunidades de trabalho e renda para mulheres em situação de vulnerabilidade social, através da
-                produção de brinquedos educativos artesanais com reuso têxtil.</div>
-            <div class="box">A produção consciente e responsável dos brinquedos educativos é nosso objetivo, tendo em
-                vista um produto sustentável com alto valor agregado. Oferecemos a logística da captação do resíduos
-                têxteis domésticos e industriais para destinação correta, implantando políticas públicas voltadas para o
-                combate as desigualdades de gênero, fortalecimento das comunidades de costura criativa.</div>
-            <div class="box">Além de um produto que desenvolve habilidades cognitivas. Nossa diferencial é o produto de
-                lalto nível, utilizando resíduos têxteis. Aproximando oportunidades de trabalho e renda no território.
-                Validar o produto digital que possa ofertar para a sociedade oportunidades de descarte, reuso e trabalho
-                com resíduos têxteis.</div>
+        <section class="highlights"> <h2>Por que escolher a Toytopia?</h2> <div class="highlight-cards"> <div class="card"> <i class="fas fa-recycle"></i> <h3>Sustentabilidade</h3> <p>Todos os brinquedos são feitos com materiais reciclados.</p> </div> <div class="card"> <i class="fas fa-heart"></i> <h3>Impacto Social</h3> <p>Ajudamos mulheres em situação de vulnerabilidade.</p> </div> <div class="card"> <i class="fas fa-brain"></i> <h3>Educação</h3> <p>Brinquedos projetados para desenvolver habilidades cognitivas.</p> </div> </div> </section>
         </div>
-    </div>
 
     <footer>
         <p>&copy; 2024 Fábrica de Ideias. Todos os direitos reservados.</p>
@@ -118,6 +112,44 @@
             userName.style.display = "block"; // Exibe o nome do usuário novamente
             userIcon.style.display = "block"; // Exibe o ícone novamente
         });
+
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const width = items[0].clientWidth;
+        track.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
+
+    // Navegar automaticamente para a próxima imagem
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalItems; // Move para o próximo slide ou volta ao início
+        updateCarousel();
+    }
+
+    // Configurar o intervalo automático (3000ms = 3 segundos)
+    const autoPlayInterval = setInterval(nextSlide, 3000);
+
+    // Parar e reiniciar o autoplay quando os botões forem usados
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+
+    prevButton.addEventListener('click', () => {
+        clearInterval(autoPlayInterval); // Pausa o autoplay
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+    });
+
+    nextButton.addEventListener('click', () => {
+        clearInterval(autoPlayInterval); // Pausa o autoplay
+        nextSlide();
+    });
+
+    // Redimensiona corretamente se a janela for redimensionada
+    window.addEventListener('resize', updateCarousel);
 
     </script>
 </body>

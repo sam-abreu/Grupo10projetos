@@ -13,7 +13,10 @@
     align-items: center;
     justify-content: flex-start; /* Alinha à esquerda */
 }
-
+.back-arrow {
+    color: #007bff;  /* Altere para a cor desejada (exemplo: azul) */
+    transition: color 0.3s ease; /* Adiciona uma transição suave */
+}
 /* Estilo do Logo */
 .logo {
     height: 135px; /* Altura do logo */

@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,16 +8,27 @@
     <title>Página de Gerenciamento</title>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'App_Projetos2/imgs/whitelogo-removebg-preview.png' %}" alt="Logo ToyTopia">
+        </div>
+        <h1>Página de Gerenciamento</h1>
+        <p class="subtitle">Gerencie os brinquedos, doações e voluntários com facilidade.</p>
+    </header>
 
-    <h1>Página de Gerenciamento</h1>
+    <main>
+        <div class="button-group">
+            <a href="{% url 'add_brinquedo' %}"><button class="add-brinquedo"><i class="fas fa-plus"></i> Adicionar Brinquedo</button></a>
+            <a href="{% url 'visualizar_doacao' %}"><button class="visualizar-doacoes"><i class="fas fa-donate"></i> Visualizar Doações</button></a>
+            <a href="{% url 'home' %}"><button class="home-button"><i class="fas fa-home"></i> Home</button></a>
+            <a href="{% url 'gerar_relatorio' %}"><button class="excel-button"><i class="fas fa-file-excel"></i> Baixar Relatório</button></a>
+            <a href="{% url 'visualizar_trabalheconosco' %}"><button class="trabalheconosco-button"><i class="fas fa-users"></i> Lista de Voluntários</button></a>
+        </div>
+    </main>
 
-    <div class="button-group"> <!-- Grupo de botões -->
-        <a href="{% url 'add_brinquedo' %}"><button class="add-brinquedo">Adicionar Brinquedo</button></a>
-        <a href="{% url 'visualizar_doacao' %}"><button class="visualizar-doacoes">Visualizar Doações</button></a>
-        <a href="{% url 'home' %}"><button class="home-button">home</button></a>
-        <a href="{% url 'gerar_relatorio' %}"><button class="excel-button">Baixar Relatório de Doações</button></a>
-        <a href="{% url 'visualizar_trabalheconosco' %}"><button class="trabalheconosco-button">Lista de voluntários</button></a>
-    </div>
+    <footer>
+        <p>&copy; 2024 ToyTopia. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
