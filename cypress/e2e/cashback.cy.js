@@ -31,7 +31,7 @@ describe('template spec', ()=>{
         cy.wait(1000)
         cy.get('#descricao').type('Gostaria de fazer uma doação de resíduos têxteis para a confecção de novos brinquedos.')
         cy.wait(1000)
-        cy.get('.btn').click()
+        cy.get('.btn').click({force : true})
         cy.wait(1000)
         cy.scrollTo('bottom')
         cy.wait(2000)

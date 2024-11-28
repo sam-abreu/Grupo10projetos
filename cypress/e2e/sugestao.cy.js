@@ -7,6 +7,8 @@ describe('template spec', () =>{
         cy.get('#sexo').select('Masculino')
         cy.wait(1000)
         cy.get('.btn').click()
+        cy.wait(1000)
+        cy.scrollTo('bottom')
         cy.wait(3000)
     })
  
@@ -18,6 +20,8 @@ describe('template spec', () =>{
         cy.get('#sexo').select('Masculino')
         cy.wait(1000)
         cy.get('.btn').click()
+        cy.wait(1000)
+        cy.scrollTo('bottom')
         cy.wait(3000)
     })
 })
