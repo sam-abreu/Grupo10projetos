@@ -1,36 +1,37 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'App_Projetos2/css/visualizar_trabalheconosco.css' %}">
-    <title>Lista voluntários</title>
+    <title>Lista de Voluntários</title>
 </head>
 <body>
+    <header class="header">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'App_Projetos2/imgs/whitelogo.PNG' %}" alt="Logo ToyTopia" class="logo">
+        </a>
+    </header>
+
     <div class="container">
-        <h1>Lista de voluntários</h1>
+        <h1>Lista de Voluntários</h1>
 
         {% if inscricoes %}
             <ul>
                 {% for inscricao in inscricoes %}
                     <li>
-                        <strong>Nome:</strong>{{inscricao.nome}} <br>
-                        <strong>email:</strong>{{inscricao.email}} <br>
-                        <strong>telefone:</strong>{{inscricao.telefone}} <br>
-                        <strong>mensagem:</strong>{{inscricao.mensagem}} <br>
+                        <strong>Nome:</strong> {{ inscricao.nome }}<br>
+                        <strong>Email:</strong> {{ inscricao.email }}<br>
+                        <strong>Telefone:</strong> {{ inscricao.telefone }}<br>
+                        <strong>Mensagem:</strong> {{ inscricao.mensagem }}<br>
+                        <hr>
                     </li>
-
                 {% endfor %}
-
             </ul>
-
         {% else %}
-        <p>Não há inscrições</p>
+            <p>Não há inscrições</p>
         {% endif %}
-            
-
     </div>
-    
 </body>
 </html>
