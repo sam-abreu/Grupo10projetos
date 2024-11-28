@@ -1,61 +1,87 @@
 /* Estilos Gerais */
 body {
+    background: #ffffff;
     font-family: Arial, sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-y: auto;
 }
 
-/* Header */
-header {
+.header-container {
+    height: 112px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 20px;
-    background-color: white;
-    color: black;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ececec;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 24px;
-    margin: 0;
+.logo img {
+    margin-left: 60px;
+    height: 135px;
+    width: auto;
+    object-fit: contain;
 }
 
-header a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
+/* Estilo para o link da seta */
+.back-arrow {
+    position: fixed;  /* Fixa a seta no canto superior esquerdo da tela */
+    top: 20px;        /* Espaço do topo */
+    left: 20px;       /* Espaço da borda esquerda */
+    z-index: 1000;    /* Garante que a seta esteja acima de outros elementos */
+    text-decoration: none; /* Remove sublinhado */
+    color: #000;      /* Cor do ícone */
 }
 
-header svg {
-    margin-right: 10px;
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
+.back-arrow svg {
+    width: 30px;    /* Tamanho do ícone */
+    height: 30px;
 }
 
-header a:hover svg {
-    transform: translateX(-5px);
+/* Mudança de cor no hover */
+.back-arrow:hover {
+    color: #007bff; /* Cor ao passar o mouse */
 }
 
-/* Main */
+/* Conteúdo Principal */
 main {
     width: 100%;
     max-width: 600px;
-    margin: 40px auto;
+    margin: 150px auto; /* Espaço superior devido ao header fixo */
     background: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    text-align: center;
+    
+}
+
+.highlighted-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
 }
 
 /* Formulário */
@@ -68,6 +94,7 @@ form {
 .form-group {
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 label {
@@ -76,7 +103,7 @@ label {
     color: #555;
 }
 
-input[type="text"] {
+input[type="text"], textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -84,7 +111,7 @@ input[type="text"] {
     transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, textarea:focus {
     border-color: #7D99EC;
     outline: none;
     box-shadow: 0 0 8px rgba(125, 153, 236, 0.5);
@@ -104,33 +131,4 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #4972ec;
     transform: scale(1.02);
-}
-
-/* Footer */
-footer {
-    margin-top: 20px;
-    text-align: center;
-    color: #888;
-    font-size: 14px;
-}
-
-/* Estilo para o container da logo */
-.logo-container {
-    display: flex;
-    align-items: center;
-    margin-right: auto; /* Garante que a logo fique alinhada à esquerda */
-}
-
-/* Estilo para a imagem da logo */
-.logo {
-    height: 135px; /* Ajuste para o tamanho desejado */
-    width: auto;
-    object-fit: contain; /* Garante que a imagem mantenha proporções */
-    margin-right: 20px; /* Espaço entre a logo e outros elementos */
-}
-
-/* Estilo para o link da seta */
-.back-arrow {
-    color: #007bff;  /* Altere para a cor desejada (exemplo: azul) */
-    transition: color 0.3s ease; /* Adiciona uma transição suave */
 }

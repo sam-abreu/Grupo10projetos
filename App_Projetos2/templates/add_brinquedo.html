@@ -2,52 +2,70 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Brinquedo</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'App_Projetos2/css/add_brinquedos.css' %}">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <a href="{% url 'home' %}">
-                <img src="{% static 'App_Projetos2/imgs/whitelogo.PNG' %}" alt="Logo ToyTopia" class="logo">
-            </a>
-        </div>
+
+    <!-- Header com logo e seta de navegação -->
+    <header class="header-container">
         <a href="{% url 'adminpage' %}" class="back-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-arrow-left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-circle-arrow-left">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M16 12H8" />
                 <path d="m12 8-4 4 4 4" />
             </svg>
         </a>
-        <h1>Adicionar Brinquedo</h1>
+        <div class="logo">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'App_Projetos2/imgs/whitelogo.PNG' %}" alt="Logo ToyTopia">
+            </a>
+        </div>
     </header>
 
+    <!-- Conteúdo Principal -->
     <main>
-        <form method="POST" action="{% url 'add_brinquedo' %}">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" required>
-            </div>
-            <div class="form-group">
-                <label for="preco">Preço:</label>
-                <input type="text" name="preco" required>
-            </div>
-            <div class="form-group">
-                <label for="faixaetaria">Faixa Etária:</label>
-                <input type="text" name="faixaetaria" required>
-            </div>
-            <div class="form-group">
-                <label for="material">Material:</label>
-                <input type="text" name="material" required>
-            </div>
-            <button type="submit">Adicionar Brinquedo</button>
-        </form>
+        <div class="container">
+            <h1 class="highlighted-title">Adicione um Brinquedo</h1>
+            <p>Preencha o formulário abaixo para adicionar um novo brinquedo:</p>
+
+            <form method="POST" action="{% url 'add_brinquedo' %}">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="text" id="preco" name="preco" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="faixaetaria">Faixa Etária:</label>
+                    <input type="text" id="faixaetaria" name="faixaetaria" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="material">Material:</label>
+                    <input type="text" id="material" name="material" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Adicionar Brinquedo</button>
+
+                {% if mensagem %}
+                    <div class="mensagem {{tipo_mensagem}}">
+                        {{ mensagem }}
+                    </div>
+                {% endif %}
+            </form>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Fábrica de Ideias. Todos os direitos reservados.</p>
-    </footer>
 </body>
 </html>
