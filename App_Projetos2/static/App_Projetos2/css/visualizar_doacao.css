@@ -13,9 +13,25 @@
     align-items: center;
     justify-content: flex-start; /* Alinha à esquerda */
 }
+/* Estilo para o link da seta */
 .back-arrow {
-    color: #007bff;  /* Altere para a cor desejada (exemplo: azul) */
-    transition: color 0.3s ease; /* Adiciona uma transição suave */
+    position: fixed;  /* Fixa a seta no canto superior esquerdo da tela */
+    top: 20px;        /* Espaço do topo */
+    left: 20px;       /* Espaço da borda esquerda */
+    z-index: 1000;    /* Garante que a seta esteja acima de outros elementos */
+    text-decoration: none; /* Remove sublinhado */
+    color: #000;      /* Cor do ícone */
+}
+
+/* Estilo para o ícone SVG da seta */
+.back-arrow svg {
+    width: 30px;    /* Tamanho do ícone */
+    height: 30px;
+}
+
+/* Mudança de cor no hover (opcional) */
+.back-arrow:hover {
+    color: #007bff; /* Cor ao passar o mouse */
 }
 
 /* Estilo do Logo */
