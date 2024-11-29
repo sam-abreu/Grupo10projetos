@@ -111,11 +111,14 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
         <p>Screencast Testes: 🔧 Em construção... 🔧</p>
     </details>
     <details>
-        <summary>Print Bug Tracker<summary>
-            <h4>Open</h4>
-            <img src="img/Bug tracker sr2.jpg" alt="Quadro do Bug tracker">
-            <h4>Closed</h4>
-            <img src="img/Print Bug tracker closed sr2.jpg" alt="Quadro do bug tracker closed">
+    <summary>Print Bug Tracker</summary>
+    <h3>Print do quadro Bug Tracker
+    <br>
+    <h4>Open:</h4>
+    <img src="img/PrintBugtrracker open.jpg" alt="Quadro do bug tracker Open">
+    <br>
+    <h4>Closed:<h4>
+    <img src="img/Printbugtrackerclosed.jpg" alt="Quadro do bug tracker closed">
     </details>
 </details>
 
