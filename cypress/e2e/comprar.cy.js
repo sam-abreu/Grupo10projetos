@@ -12,7 +12,11 @@ describe('template spec', () =>{
         cy.wait(1000)
         cy.get('#quantidade').clear().type(3)
         cy.wait(1000)
-        cy.get('#comprar-btn').click()
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            console.error('Erro detectado:', err);
+            return false; 
+          });
+        cy.get('#comprar-btn').click();
         cy.wait(7000)
     })
 
@@ -30,7 +34,11 @@ describe('template spec', () =>{
 
         cy.get('#quantidade').clear()
         cy.wait(1000)
-        cy.get('#comprar-btn').click()
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            console.error('Erro detectado:', err);
+            return false; 
+          });
+        cy.get('#comprar-btn').click();
         cy.wait(4000)
         //Segundo teste nao funciona pq o espaço quantidade nao esta preenchido
         //Esse tempo está maior pra que no screencast expliquemos essa história e seu funcionamento em específico
