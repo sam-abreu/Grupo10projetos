@@ -109,6 +109,7 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
         <p>Screencast Figma: https://youtu.be/YtBBQsLZ7LU</p>
         <p>Screencast CI/CD: https://youtu.be/ecl0wD-OVuY</p> 
         <p>Screencast Testes: https://youtu.be/ZLQxlC37fQw</p>
+        <p>Screencast Azure: https://youtu.be/rO9QGWL8AgA</p>
     </details>
     <details>
     <summary>Print Bug Tracker</summary>
