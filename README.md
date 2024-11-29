@@ -108,6 +108,14 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
         <p>Link Figma: 🔧 Em construção... 🔧</p>
         <p>Screencast Figma: https://youtu.be/YtBBQsLZ7LU</p>
         <p>Screencast CI/CD: https://youtu.be/ecl0wD-OVuY</p> 
+        <p>Screencast Testes: 🔧 Em construção... 🔧</p>
+    </details>
+    <details>
+    <summary>Print Bug Tracker<summary>
+    <h4>Open</h4>
+    <img src="img/Bug tracker sr2.jpg" alt="Quadro do Bug tracker">
+    <h4>Closed</h4>
+    <img src="img/Print Bug tracker closed sr2.jpg" alt="Quadro do bug tracker closed">
     </details>
 </details>
 
