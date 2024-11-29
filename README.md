@@ -104,26 +104,28 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
     <details>
     <summary>Links</summary>
         <p>Link do Azure: https://toytopia.azurewebsites.net </p>
-        <p>Screencast Azure: https://youtu.be/rO9QGWL8AgA</p>
-        <p>Link Figma: https://www.figma.com/design/4BAdfjgwvonWq1IQAY0WyO/Prototipo-historias?node-id=0-1&t=iWWQS6kfYU5npU03-1</p>
+        <p>Screencast do Azure: 🔧 Em construção... 🔧</p>
+        <p>Link Figma: 🔧 Em construção... 🔧</p>
         <p>Screencast Figma: https://youtu.be/YtBBQsLZ7LU</p>
         <p>Screencast CI/CD: https://youtu.be/ecl0wD-OVuY</p> 
         <p>Screencast Testes: https://youtu.be/ZLQxlC37fQw</p>
-        
+        <p>Screencast Azure: https://youtu.be/rO9QGWL8AgA</p>
     </details>
     <details>
     <summary>Print Bug Tracker</summary>
     <h3>Print do quadro Bug Tracker
     <br>
     <h4>Open:</h4>
-    <img src="img/bugtrackersr2.jpg" alt="Quadro do bug tracker Open">
+    <img src="img/PrintBugtrracker open.jpg" alt="Quadro do bug tracker Open">
     <br>
     <h4>Closed:<h4>
-    <img src="img/closedsr2.jpg" alt="Quadro do bug tracker closed">
+    <img src="img/Printbugtrackerclosed.jpg" alt="Quadro do bug tracker closed">
     </details>
 </details>
 
 <br><br>
+
+<h1>🔧 Em construção... 🔧</h1>
 
 </body>
 </html>
