@@ -111,8 +111,8 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
         <p>Screencast Testes: https://youtu.be/ZLQxlC37fQw</p>
         
     </details>
-    <details>
-    <summary>Print Bug Tracker</summary>
+<details>
+<summary>Print Bug Tracker</summary>
     <h3>Print do quadro Bug Tracker
     <br>
     <h4>Open:</h4>
