@@ -108,7 +108,7 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
         <p>Link Figma: 🔧 Em construção... 🔧</p>
         <p>Screencast Figma: https://youtu.be/YtBBQsLZ7LU</p>
         <p>Screencast CI/CD: https://youtu.be/ecl0wD-OVuY</p> 
-        <p>Screencast Testes: 🔧 Em construção... 🔧</p>
+        <p>Screencast Testes: https://youtu.be/ZLQxlC37fQw</p>
     </details>
     <details>
     <summary>Print Bug Tracker</summary>
