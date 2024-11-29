@@ -101,23 +101,27 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
  -->
 <details id="SR2">
     <summary>SR2</summary>
+    
     <details>
-    <summary>Links</summary>
-        <p>Link do Azure: https://toytopia.azurewebsites.net </p>
+        <summary>Links</summary>
+        <p>Link do Azure: <a href="https://toytopia.azurewebsites.net" target="_blank">https://toytopia.azurewebsites.net</a></p>
         <p>Screencast do Azure: 🔧 Em construção... 🔧</p>
         <p>Link Figma: 🔧 Em construção... 🔧</p>
-        <p>Screencast Figma: https://youtu.be/YtBBQsLZ7LU</p>
-        <p>Screencast CI/CD: https://youtu.be/ecl0wD-OVuY</p> 
+        <p>Screencast Figma: <a href="https://youtu.be/YtBBQsLZ7LU" target="_blank">https://youtu.be/YtBBQsLZ7LU</a></p>
+        <p>Screencast CI/CD: <a href="https://youtu.be/ecl0wD-OVuY" target="_blank">https://youtu.be/ecl0wD-OVuY</a></p>
         <p>Screencast Testes: 🔧 Em construção... 🔧</p>
     </details>
+    
     <details>
-    <summary>Print Bug Tracker<summary>
+        <summary>Print Bug Tracker</summary>
         <h4>Open</h4>
-        <img src="img/Bug tracker sr2.jpg" alt="Quadro do Bug tracker">
+        <img src="img/Bug tracker sr2.jpg" alt="Quadro do Bug Tracker Open">
         <h4>Closed</h4>
-        <img src="img/Print Bug tracker closed sr2.jpg" alt="Quadro do bug tracker closed">
+        <img src="img/Print Bug tracker closed sr2.jpg" alt="Quadro do Bug Tracker Closed">
     </details>
+    
 </details>
+
 
 <br><br>
 
