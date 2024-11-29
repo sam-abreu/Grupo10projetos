@@ -59,7 +59,7 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
 
 <details>
     <summary>Links Importantes</summary>
-    <p>jira: https://cesar-team-ztgvnfkx.atlassian.net/jira/software/projects/G1P/boards/34?atlOrigin=eyJpIjoiNjc5NjA2NWIyZWVmNGUyMjhmMTUxYjRlMDk1ODA1YTUiLCJwIjoiaiJ9</p>
+    <p>jira: https://cesar-team-ztgvnfkx.atlassian.net/jira/software/projects/G10/boards/68?atlOrigin=eyJpIjoiMzNlYWFkZmRkMjQyNGJlOWJlZGQ4YjYzNzdiODVjZDgiLCJwIjoiaiJ9</p>
     <p>Miro: https://miro.com/app/board/uXjVKqyeyhk=/</p>
     <p>Link do Azure: https://toytopia.azurewebsites.net </p>
     <p>Screencast do site feito pelo Azure : https://youtu.be/tR92qqrbJLQ  </p>
@@ -120,6 +120,18 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
     <h4>Closed:<h4>
     <img src="img/Print Bug tracker closed sr2.jpg" alt="Quadro do bug tracker closed">
     </details>
+    <details>
+    <summary>Prints do JIRA</summary>
+    <h3>Print dos quadros do JIRA:</h3>
+    <h4>Sprint 3:</h4>
+    <img src="img/backlog1.png" alt="Quadro do backlog">
+    <br>
+    <img src="img/backlog2.png" alt="Quadro do backlog">
+    <br>
+    <h4>Histórias escritas na sprint 2:</h4>
+    <img src="img/histsr2.png" alt="Quadro do backlog">
+
+    
 </details>
 
 <br><br>
