@@ -100,10 +100,14 @@ Esse projeto foi desenvolvido com as seguintes linguagens:
 <!-- SR2
  -->
 <details id="SR2">
-    <summary>SR2
-    </summary>
+    <summary>SR2</summary>
     <details>
-        <p>🔧 Em andamento...🔧</p>
+    <summary>Links</summary>
+        <p>Link do Azure: https://toytopia.azurewebsites.net </p>
+        <p>Screencast do Azure: 🔧 Em construção... 🔧</p>
+        <p>Link Figma: 🔧 Em construção... 🔧</p>
+        <p>Screencast Figma: https://youtu.be/YtBBQsLZ7LU</p>
+        <p>Screencast CI/CD: https://youtu.be/ecl0wD-OVuY</p> 
     </details>
 </details>
 

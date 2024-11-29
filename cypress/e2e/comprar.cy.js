@@ -1,5 +1,5 @@
 describe('template spec', () =>{
-    it('teste doar', () =>{
+    it('teste comprar', () =>{
         cy.visit('http://127.0.0.1:8000/')
         cy.wait(1000)
         cy.get('#username').type("Mario")
@@ -20,7 +20,7 @@ describe('template spec', () =>{
         cy.wait(7000)
     })
 
-    it('teste doar NF', () =>{
+    it('teste comprar NF', () =>{
         cy.visit('http://127.0.0.1:8000/')
         cy.wait(1000)
         cy.get('#username').type("Mario")
